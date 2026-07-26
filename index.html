@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC — Liverpool at Yankee Stadium + Jazz — Jul 29–31, 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  html, body { height: 100%; margin: 0; font-family: "Segoe UI", system-ui, sans-serif; }
+  #map { height: 100%; }
+  .panel {
+    background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    padding: 10px 12px; font-size: 12.5px; max-width: 340px; max-height: 82vh; overflow-y: auto;
+  }
+  .panel h3 { margin: 0 0 6px; font-size: 15px; }
+  .panel h4 { margin: 8px 0 4px; font-size: 13px; border-bottom: 1px solid #eee; padding-bottom: 2px; }
+  .show { border-top: 1px solid #f0f0f0; padding: 4px 0; }
+  .show b { font-size: 12.5px; }
+  .tag { display: inline-block; border-radius: 3px; padding: 0 5px; font-size: 10.5px; color: #fff; margin-left: 4px; vertical-align: 1px; }
+  .late { background: #1e8a3c; }
+  .tight { background: #c77700; }
+  .htl-book { background: #1e8a3c; color: #fff; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-weight: 600; display: inline-block; margin-top: 3px; }
+  .leaflet-popup-content { font-size: 12.5px; }
+  select, input[type=range] { font-size: 12px; }
+  .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+  .muted { color: #777; font-size: 11px; }
+  .bigstat { font-size: 13px; background: #f4f7f4; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  var map = L.map('map').setView([40.7680, -73.9800], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  var STADIUM = [40.8296, -73.9262];
+  var PABT = [40.7570, -73.9910];
+
+  L.marker(STADIUM, { icon: L.divIcon({ className: '', html: '<div style="font-size:26px;line-height:26px;filter:drop-shadow(0 1px 2px #0008)">⭐</div>', iconSize: [26,26], iconAnchor: [13,13] }) })
+    .addTo(map).bindTooltip('Yankee Stadium — Liverpool match (Wed)', { permanent: true, direction: 'right', offset: [10,0] });
+  L.marker(PABT, { icon: L.divIcon({ className: '', html: '<div style="font-size:22px;line-height:22px;filter:drop-shadow(0 1px 2px #0008)">🚌</div>', iconSize: [22,22], iconAnchor: [11,11] }) })
+    .addTo(map).bindTooltip('Port Authority — Martz from Wilkes-Barre', { direction: 'right', offset: [10,0] });
+
+  var BAND_COLOR = { '$': '#2e7d32', '$$': '#1565c0', '$$$': '#7b1fa2', '$$$$': '#b71c1c' };
+  var state = { maxBand: '$$$', martz: true, night: 'both' };
+  var hotels = [], jazz = { wednesday: [], thursday: [] }, fixture = null;
+  var hotelLayer = L.layerGroup().addTo(map);
+  var jazzLayer = L.layerGroup().addTo(map);
+
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function bandRank(b) { return { '$':1, '$$':2, '$$$':3, '$$$$':4 }[b] || 2; }
+  function dist(a, b) { return map.distance(a, b); }
+
+  // Hotel convenience score: stadium transit proxy + jazz-district proximity + optional PABT (bus luggage) proximity
+  function hotelScore(h) {
+    var p = [h.lat, h.lng];
+    var jazzCtr = [40.7330, -74.0020];            // Village core
+    var sSub = Math.max(0, 1 - dist(p, STADIUM) / 14000);
+    var sJazz = Math.max(0, 1 - dist(p, jazzCtr) / 9000);
+    var sPabt = Math.max(0, 1 - dist(p, PABT) / 5000);
+    return state.martz ? (0.30 * sSub + 0.40 * sJazz + 0.30 * sPabt) : (0.40 * sSub + 0.60 * sJazz);
+  }
+
+  function hotelPopup(h) {
+    var html = '<b>' + esc(h.name) + '</b><br>' + esc(h.neighborhood) + ' &middot; ' + esc(h.price_band) +
+      (h.est_nightly_usd ? ' &middot; ~$' + h.est_nightly_usd + '/nt' : '') +
+      (h.stars_or_class ? ' &middot; ' + esc(h.stars_or_class) : '') + '<br>' +
+      '<span class="muted">' + esc(h.walk_to_subway_note || '') + '</span><br>' +
+      esc(h.notes || '') + '<br>' +
+      '<a class="htl-book" href="' + esc(h.booking_url) + '" target="_blank" rel="noopener">Book Jul 29&ndash;31</a>';
+    return html;
+  }
+
+  function jazzPopup(s, night) {
+    return '<b>' + esc(s.venue) + '</b> <span class="muted">(' + night + ')</span><br>' +
+      esc(s.artist) + '<br>Sets: ' + esc((s.sets || []).join(', ')) + ' &middot; ' + esc(s.price || 'see site') + '<br>' +
+      '<span class="muted">' + esc(s.address) + '</span><br>' +
+      (s.late_ok ? '<span class="tag late">makes it after the match</span><br>' : '') +
+      (s.crawl_hint ? '<span class="muted">' + esc(s.crawl_hint) + '</span><br>' : '') +
+      '<a class="htl-book" href="' + esc(s.url) + '" target="_blank" rel="noopener">Tickets / reserve</a>';
+  }
+
+  function render() {
+    hotelLayer.clearLayers();
+    var ranked = hotels.slice().sort(function (a, b) { return hotelScore(b) - hotelScore(a); });
+    var kept = 0;
+    ranked.forEach(function (h, i) {
+      if (bandRank(h.price_band) > bandRank(state.maxBand)) return;
+      kept++;
+      var top3 = i < 3;
+      var m = L.circleMarker([h.lat, h.lng], {
+        radius: top3 ? 9 : 6.5, color: top3 ? '#d4af37' : '#fff', weight: top3 ? 3 : 1.5,
+        fillColor: BAND_COLOR[h.price_band] || '#555', fillOpacity: 0.95
+      }).bindPopup(hotelPopup(h), { maxWidth: 300 });
+      hotelLayer.addLayer(m);
+    });
+
+    jazzLayer.clearLayers();
+    var nights = state.night === 'both' ? ['wednesday', 'thursday'] : [state.night];
+    nights.forEach(function (n) {
+      (jazz[n] || []).forEach(function (s) {
+        if (s.lat == null) return;
+        var m = L.marker([s.lat, s.lng], { icon: L.divIcon({ className: '', html: '<div style="font-size:18px;line-height:18px;filter:drop-shadow(0 1px 1px #0008)">' + (n === 'wednesday' ? '🎷' : '🎺') + '</div>', iconSize: [18,18], iconAnchor: [9,9] }) })
+          .bindPopup(jazzPopup(s, n === 'wednesday' ? 'Wed' : 'Thu'), { maxWidth: 300 });
+        jazzLayer.addLayer(m);
+      });
+    });
+
+    var el = document.getElementById('hcount');
+    if (el) el.textContent = kept + ' hotels shown';
+    renderItin();
+  }
+
+  function renderItin() {
+    var el = document.getElementById('itin');
+    if (!el) return;
+    var h = '';
+    if (fixture && fixture.fixture) {
+      var f = fixture.fixture;
+      h += '<div class="bigstat">⚽ <b>Liverpool vs ' + esc(f.opponent) + '</b><br>' + esc(f.date) + ' &middot; kickoff ' + esc(f.kickoff_local) +
+           (fixture.end_estimate ? ' &middot; ends ~' + esc(fixture.end_estimate) : '') + '</div>';
+    } else {
+      h += '<div class="bigstat muted">Match details loading…</div>';
+    }
+    if (fixture && fixture.martz && fixture.martz.wed_departures) {
+      h += '<h4>🚌 Martz from Wilkes-Barre</h4><div class="muted">Wed out: ' +
+        fixture.martz.wed_departures.map(function (d) { return esc(d.time) + '→' + esc(d.arrive); }).join(' · ') +
+        '<br>Fri back: ' + (fixture.martz.fri_returns || []).map(function (d) { return esc(d.time); }).join(' · ') +
+        (fixture.martz.fare_range ? '<br>Fare: ' + esc(fixture.martz.fare_range) : '') + '</div>';
+    }
+    var wl = (jazz.wednesday || []).filter(function (s) { return s.late_ok; });
+    h += '<h4>🎷 Wed — after the match</h4>';
+    h += wl.length ? wl.map(function (s) {
+      return '<div class="show"><b>' + esc(s.venue) + '</b> — ' + esc(s.artist) + '<br><span class="muted">' +
+        esc((s.sets || []).join(', ')) + ' · ' + esc(s.price || '') + '</span></div>';
+    }).join('') : '<div class="muted">Loading late sets…</div>';
+    h += '<h4>🎺 Thu — the crawl</h4>';
+    h += (jazz.thursday || []).length ? (jazz.thursday || []).slice(0, 12).map(function (s) {
+      return '<div class="show"><b>' + esc(s.venue) + '</b> — ' + esc(s.artist) + '<br><span class="muted">' +
+        esc((s.sets || []).join(', ')) + ' · ' + esc(s.price || '') + '</span></div>';
+    }).join('') : '<div class="muted">Loading Thursday listings…</div>';
+    el.innerHTML = h;
+  }
+
+  // Controls
+  var ctl = L.control({ position: 'topright' });
+  ctl.onAdd = function () {
+    var d = L.DomUtil.create('div', 'panel');
+    d.innerHTML = '<h3>NYC: Liverpool + Jazz<br><span class="muted">Wed Jul 29 → Fri Jul 31</span></h3>' +
+      '<label><input type="checkbox" id="c-martz" checked> Arriving by Martz bus (favor Port Authority area)</label><br>' +
+      'Max hotel price: <select id="c-band"><option value="$">$</option><option value="$$">$$</option><option value="$$$" selected>$$$</option><option value="$$$$">$$$$</option></select><br>' +
+      'Jazz pins: <select id="c-night"><option value="both" selected>both nights</option><option value="wednesday">Wed only</option><option value="thursday">Thu only</option></select>' +
+      '<div id="hcount" class="muted"></div>' +
+      '<div class="muted" style="margin-top:4px"><span class="legend-dot" style="background:#2e7d32"></span>$ <span class="legend-dot" style="background:#1565c0"></span>$$ <span class="legend-dot" style="background:#7b1fa2"></span>$$$ <span class="legend-dot" style="background:#b71c1c"></span>$$$$ &middot; gold ring = top-3 fit &middot; 🎷 Wed 🎺 Thu</div>';
+    L.DomEvent.disableClickPropagation(d);
+    return d;
+  };
+  ctl.addTo(map);
+
+  var itinCtl = L.control({ position: 'topleft' });
+  itinCtl.onAdd = function () {
+    var d = L.DomUtil.create('div', 'panel');
+    d.innerHTML = '<div id="itin"><div class="muted">Loading trip data…</div></div>';
+    L.DomEvent.disableClickPropagation(d);
+    return d;
+  };
+  itinCtl.addTo(map);
+
+  function wire() {
+    document.getElementById('c-martz').addEventListener('change', function (e) { state.martz = e.target.checked; render(); });
+    document.getElementById('c-band').addEventListener('change', function (e) { state.maxBand = e.target.value; render(); });
+    document.getElementById('c-night').addEventListener('change', function (e) { state.night = e.target.value; render(); });
+  }
+  wire();
+
+  Promise.all([
+    fetch('nyc_hotels.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
+    fetch('nyc_jazz.json').then(function (r) { return r.json(); }).catch(function () { return { wednesday: [], thursday: [] }; }),
+    fetch('nyc_fixture.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+  ]).then(function (res) {
+    hotels = res[0] || [];
+    jazz = res[1] || { wednesday: [], thursday: [] };
+    fixture = res[2];
+    render();
+  });
+</script>
+</body>
+</html>
