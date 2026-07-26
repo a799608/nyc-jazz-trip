@@ -1,0 +1,67 @@
+{
+  "fixture": {
+    "opponent": "Wrexham AFC",
+    "date": "2026-07-29 (Wednesday)",
+    "kickoff_local": "7:30 PM ET",
+    "venue": "Yankee Stadium, Bronx, NY (soccer capacity 47,309)",
+    "source_urls": [
+      "https://www.liverpoolfc.com/news/pre-season-stadium-guide-yankee-stadium-new-york",
+      "https://www.mlb.com/press-release/yankee-stadium-to-host-preseason-soccer-match-between-liverpool-fc-and-wrexham-afc-on-wednesday-july-29",
+      "https://new-york.events/venue/yankee-stadium/",
+      "https://www.stubhub.com/liverpool-fc-bronx-tickets-7-29-2026/event/160620754"
+    ]
+  },
+  "end_estimate": "~9:30 PM ET (7:30 kickoff + ~2h incl. halftime; friendlies have no extra time, though a drawn tour match can go straight to penalties, adding ~15 min). Realistically out of the stadium 9:45-10:00 PM.",
+  "transit": [
+    {
+      "dest": "Greenwich Village (Christopher St / W 4th St)",
+      "route": "D train downtown direct from 161 St-Yankee Stadium to W 4 St-Washington Sq (no transfer), then 5-8 min walk to Christopher St",
+      "minutes": "45-55 door-to-door (ride ~27-30 min + 10-15 min post-event station crowding/wait + walk)",
+      "notes": "D is the smart pick: one seat, runs express on Central Park West (145 St to 59 St) in the evening, and W 4 St is a 6th Ave stop right in the Village. The 4 train is the wrong side of town for this - it would mean 4 to 14 St-Union Sq (~20 min) plus a 12-15 min walk west, no faster and more walking."
+    },
+    {
+      "dest": "Midtown West (Times Sq / Columbus Circle)",
+      "route": "D train downtown direct from 161 St to 59 St-Columbus Circle (express 145 St to 59 St). For Times Sq: 1 train two stops south, or a 12-15 min walk down Broadway",
+      "minutes": "30-40 door-to-door to Columbus Circle (ride ~15-17 min + crowd delay); add ~10 for Times Sq",
+      "notes": "D again beats the 4. The 4 is a Lexington/East Side express (149 St-Grand Concourse, 125, 86, 59, Grand Central) - fine if the hotel were East Midtown, but reaching Times Sq via 4 requires Grand Central + S shuttle (~25-30 min total) with two crowded transfers. At ~9:45 PM both lines still run express in Manhattan (the 4 goes local only after ~midnight); MTA adds extra 4 and D trains after Yankee Stadium events."
+    },
+    {
+      "dest": "Pre-game: Port Authority to Yankee Stadium",
+      "route": "Walk ~10 min east on 42nd St to 42 St-Bryant Pk, uptown D express to 161 St-Yankee Stadium",
+      "minutes": "~35 door-to-door (10 min walk + ~20 min ride)",
+      "notes": "Simplest one-seat option. Alternative: 7 or S from Times Sq to Grand Central, then uptown 4 - similar total time, two legs."
+    }
+  ],
+  "martz": {
+    "wed_departures": [
+      { "time": "6:20 AM", "arrive": "9:40 AM" },
+      { "time": "6:45 AM", "arrive": "10:10 AM" },
+      { "time": "9:55 AM", "arrive": "1:10 PM" },
+      { "time": "12:30 PM", "arrive": "3:45 PM" }
+    ],
+    "fri_returns": [
+      { "time": "8:30 AM", "arrive": "11:35 AM" },
+      { "time": "11:00 AM", "arrive": "2:00 PM" },
+      { "time": "1:45 PM", "arrive": "4:45 PM" }
+    ],
+    "duration": "2h45m-3h40m per published schedules (most runs ~3h; longer than the 2h15-2h45 assumption - plan on 3h)",
+    "fare_range": "From $55 one-way per ride.martzbus.com booking site; round-trip price not published online (expect ~2x, minor discount possible). Confirm at booking.",
+    "source_urls": [
+      "https://ride.martzbus.com/locations/bus-from/wilkes-barre-pa/to/new-york-ny",
+      "https://ride.martzbus.com/locations/bus-from/new-york-ny/to/wilkes-barre-township-pa",
+      "https://martzbus.com/customer-notice-new-york-city-schedule/",
+      "https://martzbus.com/bus-from-wilkes-barre-to-nyc-schedule-tips-faqs/"
+    ],
+    "subway_pabt_to_stadium_minutes": 35,
+    "terminals": "Departs 47 S Washington St, Wilkes-Barre PA 18701; arrives Port Authority Bus Terminal, 41st St & 8th Ave, NYC. No same-night return needed (Friday return).",
+    "recommended": "Out: 9:55 AM Wed (arrives PABT 1:10 PM - time to drop bags/check in and reach the Bronx well before 7:30 kickoff). Back: 11:00 AM Fri (arrives WB ~2:00 PM) for an unhurried morning, or 8:30 AM to be home by lunch.",
+    "caveats": "ride.martzbus.com schedule pages show the standing weekday pattern (consistent with Martz's Apr 2025 schedule notice); verify the specific 7/29 and 7/31 runs when booking - Martz sells reserved e-tickets."
+  },
+  "notes": [
+    "Fixture triple-verified: Liverpool FC official stadium guide (7:30 PM local), Yankees/MLB press release (Wed July 29), and independent event listings (Jul 29, 7:30 PM). Part of Liverpool's 2026 US pre-season tour (Sunderland in Nashville 7/25, Wrexham at Yankee Stadium 7/29, Leeds at Soldier Field 8/2).",
+    "Crowd: expect near-sellout (~47,000) - Liverpool's huge US fanbase plus Wrexham's Reynolds/McElhenney celebrity draw. 161 St station is packed for 30-45 min after the final whistle; walking a block or grabbing food near the stadium before descending can beat the crush. MTA historically adds extra 4 and D trains and station staff after stadium events.",
+    "Bag policy (Yankee Stadium): one soft-sided bag max 16in x 16in x 8in plus a small personal item; NO backpacks, no hard-sided coolers, no luggage/wheeled bags. No clear-bag requirement. Do not bring the Martz travel bag to the stadium - check into the hotel first (the 9:55 AM bus makes this easy).",
+    "Timing risk is low: friendlies play no extra time; worst case a penalty shootout pushes the end to ~9:45 PM. Even then, subway back to the Village or Midtown lands well before 11 PM.",
+    "Weeknight evening subway headways off-event are ~8-12 min on the 4/B/D; post-event extra service shortens waits. After ~midnight the 4 goes local (slower) - irrelevant here unless staying very late in the Bronx."
+  ]
+}
