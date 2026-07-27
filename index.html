@@ -54,7 +54,16 @@
     .addTo(map).bindTooltip('Port Authority — Martz from Wilkes-Barre', { direction: 'right', offset: [10,0] });
 
   var BAND_COLOR = { '$': '#2e7d32', '$$': '#1565c0', '$$$': '#7b1fa2', '$$$$': '#b71c1c' };
-  var state = { maxBand: '$$$', martz: true, night: 'both' };
+  var state = { maxBand: '$$$', martz: true, night: 'both', venueStyle: 'no_basement' };
+  // venueStyle: 'no_basement' (dinner+laid-back, hide small basements) | 'dinner_show' | 'laid_back' | 'all'
+  function venuePass(s) {
+    var t = s.venue_type;
+    if (!t) return true;                                  // unclassified: show until data lands
+    if (state.venueStyle === 'all') return true;
+    if (state.venueStyle === 'no_basement') return t !== 'basement_small';
+    return t === state.venueStyle;
+  }
+  var TYPE_LABEL = { dinner_show: '🍽 dinner & show', laid_back: '🛋 laid-back', basement_small: '🕳 small basement room' };
   var hotels = [], jazz = { wednesday: [], thursday: [] }, fixture = null;
   var hotelLayer = L.layerGroup().addTo(map);
   var jazzLayer = L.layerGroup().addTo(map);
@@ -86,6 +95,8 @@
   function jazzPopup(s, night) {
     return '<b>' + esc(s.venue) + '</b> <span class="muted">(' + night + ')</span><br>' +
       esc(s.artist) + '<br>Sets: ' + esc((s.sets || []).join(', ')) + ' &middot; ' + esc(s.price || 'see site') + '<br>' +
+      (s.venue_type ? '<b>' + (TYPE_LABEL[s.venue_type] || esc(s.venue_type)) + '</b>' + (s.food ? ' &middot; ' + esc(s.food) : '') + '<br>' : '') +
+      (s.room_note ? '<span class="muted">' + esc(s.room_note) + '</span><br>' : '') +
       '<span class="muted">' + esc(s.address) + '</span><br>' +
       (s.late_ok ? '<span class="tag late">makes it after the match</span><br>' : '') +
       (s.crawl_hint ? '<span class="muted">' + esc(s.crawl_hint) + '</span><br>' : '') +
@@ -111,7 +122,7 @@
     var nights = state.night === 'both' ? ['wednesday', 'thursday'] : [state.night];
     nights.forEach(function (n) {
       (jazz[n] || []).forEach(function (s) {
-        if (s.lat == null) return;
+        if (s.lat == null || !venuePass(s)) return;
         var m = L.marker([s.lat, s.lng], { icon: L.divIcon({ className: '', html: '<div style="font-size:18px;line-height:18px;filter:drop-shadow(0 1px 1px #0008)">' + (n === 'wednesday' ? '🎷' : '🎺') + '</div>', iconSize: [18,18], iconAnchor: [9,9] }) })
           .bindPopup(jazzPopup(s, n === 'wednesday' ? 'Wed' : 'Thu'), { maxWidth: 300 });
         jazzLayer.addLayer(m);
@@ -140,17 +151,18 @@
         '<br>Fri back: ' + (fixture.martz.fri_returns || []).map(function (d) { return esc(d.time); }).join(' · ') +
         (fixture.martz.fare_range ? '<br>Fare: ' + esc(fixture.martz.fare_range) : '') + '</div>';
     }
-    var wl = (jazz.wednesday || []).filter(function (s) { return s.late_ok; });
+    function showLine(s) {
+      return '<div class="show"><b>' + esc(s.venue) + '</b>' +
+        (s.venue_type ? ' <span class="muted">' + (TYPE_LABEL[s.venue_type] || '') + '</span>' : '') +
+        ' — ' + esc(s.artist) + '<br><span class="muted">' +
+        esc((s.sets || []).join(', ')) + ' · ' + esc(s.price || '') + '</span></div>';
+    }
+    var wl = (jazz.wednesday || []).filter(function (s) { return s.late_ok && venuePass(s); });
     h += '<h4>🎷 Wed — after the match</h4>';
-    h += wl.length ? wl.map(function (s) {
-      return '<div class="show"><b>' + esc(s.venue) + '</b> — ' + esc(s.artist) + '<br><span class="muted">' +
-        esc((s.sets || []).join(', ')) + ' · ' + esc(s.price || '') + '</span></div>';
-    }).join('') : '<div class="muted">Loading late sets…</div>';
+    h += wl.length ? wl.map(showLine).join('') : '<div class="muted">No late sets match the current venue-style filter.</div>';
+    var tl = (jazz.thursday || []).filter(venuePass);
     h += '<h4>🎺 Thu — the crawl</h4>';
-    h += (jazz.thursday || []).length ? (jazz.thursday || []).slice(0, 12).map(function (s) {
-      return '<div class="show"><b>' + esc(s.venue) + '</b> — ' + esc(s.artist) + '<br><span class="muted">' +
-        esc((s.sets || []).join(', ')) + ' · ' + esc(s.price || '') + '</span></div>';
-    }).join('') : '<div class="muted">Loading Thursday listings…</div>';
+    h += tl.length ? tl.slice(0, 12).map(showLine).join('') : '<div class="muted">No Thursday shows match the current venue-style filter.</div>';
     el.innerHTML = h;
   }
 
@@ -161,7 +173,8 @@
     d.innerHTML = '<h3>NYC: Liverpool + Jazz<br><span class="muted">Wed Jul 29 → Fri Jul 31</span></h3>' +
       '<label><input type="checkbox" id="c-martz" checked> Arriving by Martz bus (favor Port Authority area)</label><br>' +
       'Max hotel price: <select id="c-band"><option value="$">$</option><option value="$$">$$</option><option value="$$$" selected>$$$</option><option value="$$$$">$$$$</option></select><br>' +
-      'Jazz pins: <select id="c-night"><option value="both" selected>both nights</option><option value="wednesday">Wed only</option><option value="thursday">Thu only</option></select>' +
+      'Jazz pins: <select id="c-night"><option value="both" selected>both nights</option><option value="wednesday">Wed only</option><option value="thursday">Thu only</option></select><br>' +
+      'Venue style: <select id="c-style"><option value="no_basement" selected>dinner + laid-back (no tiny basements)</option><option value="dinner_show">🍽 dinner &amp; show only</option><option value="laid_back">🛋 laid-back only</option><option value="all">everything (incl. basements)</option></select>' +
       '<div id="hcount" class="muted"></div>' +
       '<div class="muted" style="margin-top:4px"><span class="legend-dot" style="background:#2e7d32"></span>$ <span class="legend-dot" style="background:#1565c0"></span>$$ <span class="legend-dot" style="background:#7b1fa2"></span>$$$ <span class="legend-dot" style="background:#b71c1c"></span>$$$$ &middot; gold ring = top-3 fit &middot; 🎷 Wed 🎺 Thu</div>';
     L.DomEvent.disableClickPropagation(d);
@@ -182,6 +195,7 @@
     document.getElementById('c-martz').addEventListener('change', function (e) { state.martz = e.target.checked; render(); });
     document.getElementById('c-band').addEventListener('change', function (e) { state.maxBand = e.target.value; render(); });
     document.getElementById('c-night').addEventListener('change', function (e) { state.night = e.target.value; render(); });
+    document.getElementById('c-style').addEventListener('change', function (e) { state.venueStyle = e.target.value; render(); });
   }
   wire();
 
