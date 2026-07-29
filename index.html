@@ -73,6 +73,13 @@
   L.marker(SECAUCUS, { icon: L.divIcon({ className: '', html: '<div style="font-size:22px;line-height:22px;filter:drop-shadow(0 1px 2px #0008)">🅿️</div>', iconSize: [22,22], iconAnchor: [11,11] }) })
     .addTo(map).bindTooltip('Secaucus Junction — park here (24/7 lot)', { direction: 'right', offset: [10,0] });
 
+  var HOTEL = [40.75428, -73.99395];
+  L.marker(HOTEL, { icon: L.divIcon({ className: '', html: '<div style="font-size:24px;line-height:24px;filter:drop-shadow(0 1px 2px #0008)">🏨</div>', iconSize: [24,24], iconAnchor: [12,12] }) })
+    .addTo(map).bindTooltip('Staypineapple — your hotel', { permanent: true, direction: 'right', offset: [10,0] })
+    .bindPopup('<b>Staypineapple New York</b><br>337 W 36th St (8th/9th Ave)<br>Check-in 4 PM — desk holds bags earlier.<br>' +
+      '<span class="muted">Penn Station 5 min walk &middot; Herald Sq D train 8 min &middot; Birdland 8 min &middot; Jazzcultural 12 min</span><br>' +
+      '<a class="htl-book" href="route.html">Route guide from here</a>', { maxWidth: 280 });
+
   var state = { night: 'both', venueStyle: 'no_basement' };
   var jazz = { wednesday: [], thursday: [] }, fixture = null;
   var jazzLayer = L.layerGroup().addTo(map);
