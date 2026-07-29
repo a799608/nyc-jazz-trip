@@ -79,6 +79,19 @@
     if (!('parking' in h) || h.parking == null) return true;   // unverified: show, labeled in popup
     return h.parking !== 'none';
   }
+  var excluded = {};
+  try { excluded = JSON.parse(localStorage.getItem('excludedHotels') || '{}'); } catch (e) {}
+  window._excludeHotel = function (id) {
+    excluded[id] = true;
+    localStorage.setItem('excludedHotels', JSON.stringify(excluded));
+    map.closePopup();
+    render();
+  };
+  window._resetExcluded = function () {
+    excluded = {};
+    localStorage.setItem('excludedHotels', '{}');
+    render();
+  };
   // venueStyle: 'no_basement' (dinner+laid-back, hide small basements) | 'dinner_show' | 'laid_back' | 'all'
   function venuePass(s) {
     var t = s.venue_type;
@@ -116,8 +129,14 @@
           : (h.parking === 'none' ? '<b style="color:#b71c1c">🚗 No parking offered</b><br>'
                                   : '<span class="muted">🚗 parking unverified — call ahead</span><br>'))
         : '') +
+      ('available_jul29' in h ? (h.available_jul29 === true
+          ? '<b style="color:#1e8a3c">✓ Rooms showing for tonight</b><br>'
+          : (h.available_jul29 == null ? '<span class="muted">availability unverified — check the link</span><br>' : '')) : '') +
       esc(h.notes || '') + '<br>' +
-      '<a class="htl-book" href="' + esc(h.booking_url) + '" target="_blank" rel="noopener">Book Jul 29&ndash;31</a>';
+      '<div style="display:flex;gap:6px;margin-top:4px">' +
+      '<a class="htl-book" style="flex:1.4;text-align:center" href="' + esc(h.booking_url) + '" target="_blank" rel="noopener">Book Jul 29&ndash;31</a>' +
+      '<button onclick="_excludeHotel(\'' + esc(h.id) + '\')" style="flex:1;background:#fff;border:1px solid #c33;color:#c33;border-radius:6px;cursor:pointer;font-weight:700">&#10008; Exclude</button>' +
+      '</div>';
     return html;
   }
 
@@ -139,6 +158,8 @@
     ranked.forEach(function (h, i) {
       if (bandRank(h.price_band) > bandRank(state.maxBand)) return;
       if (!parkingOk(h)) return;
+      if (excluded[h.id]) return;
+      if (h.available_jul29 === false) return;   // confirmed sold out for these dates
       kept++;
       var top3 = i < 3;
       var m = L.circleMarker([h.lat, h.lng], {
@@ -160,7 +181,11 @@
     });
 
     var el = document.getElementById('hcount');
-    if (el) el.textContent = kept + ' hotels shown';
+    if (el) {
+      var nEx = Object.keys(excluded).length;
+      el.innerHTML = kept + ' hotels shown' +
+        (nEx ? ' &middot; ' + nEx + ' excluded <a href="#" onclick="_resetExcluded();return false">reset</a>' : '');
+    }
     renderItin();
   }
 
