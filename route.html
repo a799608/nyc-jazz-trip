@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Route Guide — NYC Trip, Jul 29–31</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: #f5f5f2; color: #222; }
+  header { background: #1e8a3c; color: #fff; padding: 14px 16px; }
+  header h1 { margin: 0; font-size: 19px; }
+  header div { font-size: 13px; opacity: .9; }
+  .leg { background: #fff; margin: 14px auto; max-width: 720px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.12); overflow: hidden; }
+  .leg h2 { margin: 0; padding: 12px 14px; font-size: 16px; background: #f0f6f1; border-bottom: 1px solid #e0e8e1; }
+  .map { height: 260px; }
+  .steps { padding: 10px 16px 14px; font-size: 14.5px; line-height: 1.5; }
+  .steps li { margin-bottom: 7px; }
+  .gbtn { display: inline-block; margin: 0 16px 16px; background: #1e8a3c; color: #fff; text-decoration: none; font-weight: 700; padding: 10px 16px; border-radius: 6px; }
+  .warn { background: #fff4e0; border-left: 4px solid #c77700; padding: 8px 12px; margin: 10px 16px; font-size: 13.5px; border-radius: 4px; }
+  .verify { color: #a05a00; font-weight: 600; }
+  footer { text-align: center; color: #888; font-size: 12px; padding: 18px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🗽 Route Guide — Wed Jul 29 → Fri Jul 31</h1>
+  <div>Liverpool vs Wrexham 7:30 PM · park in NJ · one train in · one subway line all night</div>
+</header>
+
+<div class="leg">
+  <h2>Leg 1 — 🚗 Drive: Wilkes-Barre → Harrison PATH garage (~2 hrs)</h2>
+  <div id="m1" class="map"></div>
+  <ol class="steps">
+    <li>Take <b>I-80 East</b> across New Jersey.</li>
+    <li>Merge onto <b>I-280 East</b> toward Newark / Harrison.</li>
+    <li>GPS destination: <b>Harrison PATH Station Parking, Harrison NJ</b> — one garage, right at the train station.</li>
+    <li>Park, take your backpacks, walk into the station. Done driving until Friday.</li>
+  </ol>
+  <div class="warn"><span class="verify">Being confirmed this morning:</span> overnight parking rules + exact rate (expected ~$10–15/day). Backup if needed: Journal Square garage, same train line, same steps after parking.</div>
+  <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Wilkes-Barre,PA&destination=Harrison+PATH+Station+Parking,+Harrison,+NJ&travelmode=driving">Open Leg 1 in Google Maps</a>
+</div>
+
+<div class="leg">
+  <h2>Leg 2 — 🚆 PATH train: Harrison → 33rd St, Manhattan (~25 min)</h2>
+  <div id="m2" class="map"></div>
+  <ol class="steps">
+    <li>At the turnstile, <b>tap your credit card</b> on the reader (that's the fare, ~$3 each — no ticket needed).</li>
+    <li>Board the train signed <b>“33 St”</b> (its final stop). Any train on that platform going toward New York.</li>
+    <li>Relax ~25 minutes. <b>Stay on until the last stop.</b> You can't miss it — the train ends there.</li>
+    <li>Come up the stairs: you're at <b>33rd St &amp; 6th Ave</b>, Midtown Manhattan.</li>
+  </ol>
+  <div class="warn">PATH runs <b>24 hours</b> — your 1 AM jazz nights can't strand you.</div>
+  <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Harrison+PATH+Station,+Harrison,+NJ&destination=33rd+St+PATH+Station,+New+York,+NY&travelmode=transit">Open Leg 2 in Google Maps</a>
+</div>
+
+<div class="leg">
+  <h2>Leg 3 — 🎒 Walk to hotel, drop the bags</h2>
+  <div id="m3" class="map"></div>
+  <ol class="steps">
+    <li>Walk to your hotel and <b>leave the backpacks there</b> (even if the room isn't ready — the front desk holds bags).</li>
+    <li><b>Yankee Stadium does not allow backpacks.</b> Bring only pocket stuff + phone tickets.</li>
+    <li>Most Midtown hotels on the map are under 10 minutes' walk from where the PATH lets you out.</li>
+  </ol>
+  <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=33rd+St+PATH+Station,+New+York,+NY&destination=Herald+Square,+New+York,+NY&travelmode=walking">Open Leg 3 in Google Maps</a>
+</div>
+
+<div class="leg">
+  <h2>Leg 4 — ⚾ Subway to the match: Herald Sq → Yankee Stadium (~25 min)</h2>
+  <div id="m4" class="map"></div>
+  <ol class="steps">
+    <li>Go to <b>34 St–Herald Sq station</b> (34th &amp; 6th — one block from the PATH exit; orange B/D/F/M globes).</li>
+    <li>Tap your credit card at the turnstile (same tap-to-pay, $2.90).</li>
+    <li>Take the <b>D train, direction “Uptown / Bronx.”</b> Follow signs that say <b>Uptown</b>.</li>
+    <li>Ride to <b>161 St–Yankee Stadium</b> (~25 min). The stadium is directly outside.</li>
+    <li>Kickoff 7:30 PM — be on the train by <b>6:30</b> to walk in comfortably.</li>
+  </ol>
+  <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Herald+Square,+New+York,+NY&destination=Yankee+Stadium,+Bronx,+NY&travelmode=transit">Open Leg 4 in Google Maps</a>
+</div>
+
+<div class="leg">
+  <h2>Leg 5 — 🎷 After the final whistle: one train does everything</h2>
+  <div id="m5" class="map"></div>
+  <ol class="steps">
+    <li>Back into <b>161 St station</b>, take the <b>D train, direction “Downtown / Brooklyn.”</b></li>
+    <li><b>For Midtown jazz</b> (Jazzcultural, Birdland area): off at <b>7 Av</b> or <b>47–50 Sts Rockefeller Ctr</b> (~20 min).</li>
+    <li><b>For Village jazz</b> (The Django is near, Vanguard/Blue Note area): stay on to <b>W 4 St–Washington Sq</b> (~30 min).</li>
+    <li><b>Back to the hotel later:</b> any D/F/M train to <b>34 St–Herald Sq</b>. Subway runs all night.</li>
+  </ol>
+  <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=Yankee+Stadium,+Bronx,+NY&destination=W+4+St+Washington+Sq+Station,+New+York,+NY&travelmode=transit">Open Leg 5 in Google Maps</a>
+</div>
+
+<footer>Friday home: PATH 33rd St → Harrison (24/7), pick up the car, I-280 W → I-80 W. · <a href="index.html">Back to the trip map</a></footer>
+
+<script>
+  var WB = [41.2459, -75.8813], HARRISON = [40.7394, -74.1554], PATH33 = [40.7486, -73.9880],
+      HERALD = [40.7496, -73.9877], STADIUM = [40.8296, -73.9262], W4 = [40.7323, -74.0003],
+      ROCK = [40.7587, -73.9812];
+  var PATH_LINE = [HARRISON, [40.7325, -74.0632], [40.7195, -74.0434], [40.7267, -74.0338], [40.7331, -74.0070], [40.7343, -73.9990], [40.7373, -73.9968], [40.7430, -73.9928], PATH33];
+  var D_UP = [HERALD, [40.7541, -73.9843], ROCK, [40.7627, -73.9817], [40.7682, -73.9819], [40.8111, -73.9522], [40.8241, -73.9444], [40.8279, -73.9256]];
+  var D_DOWN = [[40.8279, -73.9256], [40.8241, -73.9444], [40.8111, -73.9522], [40.7682, -73.9819], [40.7627, -73.9817], ROCK, [40.7541, -73.9843], HERALD, [40.7401, -73.9959], W4];
+
+  function mk(id, focus) {
+    var m = L.map(id, { scrollWheelZoom: false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(m);
+    m.fitBounds(focus, { padding: [24, 24] });
+    return m;
+  }
+  function pin(m, ll, emoji, label) {
+    L.marker(ll, { icon: L.divIcon({ className: '', html: '<div style="font-size:22px;filter:drop-shadow(0 1px 2px #0008)">' + emoji + '</div>', iconSize: [22, 22], iconAnchor: [11, 11] }) })
+      .addTo(m).bindTooltip(label, { permanent: true, direction: 'right', offset: [10, 0] });
+  }
+
+  var m1 = mk('m1', [WB, HARRISON]);
+  L.polyline([WB, [41.05, -74.85], [40.92, -74.35], [40.78, -74.23], HARRISON], { color: '#1565c0', weight: 4 }).addTo(m1);
+  pin(m1, WB, '🏠', 'Wilkes-Barre'); pin(m1, HARRISON, '🅿️', 'Harrison garage');
+
+  var m2 = mk('m2', PATH_LINE);
+  L.polyline(PATH_LINE, { color: '#c77700', weight: 4 }).addTo(m2);
+  pin(m2, HARRISON, '🅿️', 'Harrison'); pin(m2, PATH33, '🚉', '33rd St (last stop)');
+
+  var m3 = mk('m3', [[40.744, -73.995], [40.755, -73.982]]);
+  L.polyline([PATH33, HERALD], { color: '#2e7d32', weight: 4, dashArray: '4 6' }).addTo(m3);
+  pin(m3, PATH33, '🚉', 'PATH exit 33rd/6th'); pin(m3, HERALD, '🏨', 'Hotel / Herald Sq');
+
+  var m4 = mk('m4', D_UP);
+  L.polyline(D_UP, { color: '#f60', weight: 4 }).addTo(m4);
+  pin(m4, HERALD, '🚇', 'Herald Sq — D uptown'); pin(m4, STADIUM, '⚾', 'Yankee Stadium');
+
+  var m5 = mk('m5', D_DOWN);
+  L.polyline(D_DOWN, { color: '#7b1fa2', weight: 4 }).addTo(m5);
+  pin(m5, STADIUM, '⚾', '161 St — D downtown'); pin(m5, ROCK, '🎷', 'Midtown jazz stop'); pin(m5, W4, '🎷', 'W 4 St — Village jazz');
+</script>
+</body>
+</html>

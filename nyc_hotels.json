@@ -12,7 +12,10 @@
   "stars_or_class": "3-star micro",
   "walk_to_subway_note": "A/C/E at 42nd St-Port Authority 2 min; Times Sq-42nd hub (1/2/3/7/N/Q/R/W/S) 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Pod+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Micro-room budget-chic with rooftop bar; B/D at Bryant Pk 10 min for one-seat D to Yankee Stadium."
+  "notes": "Micro-room budget-chic with rooftop bar; B/D at Bryant Pk 10 min for one-seat D to Yankee Stadium.",
+  "parking": "nearby_garage",
+  "parking_cost": "$57/24h garage nearby ($67 SUV)",
+  "parking_note": "No hotel parking or valet; guests use iPark at 350 W 42nd St, 1 block away; no in/out privileges."
  },
  {
   "id": "row-nyc",
@@ -27,7 +30,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St 1 min; Times Sq-42nd hub 4 min",
   "booking_url": "https://www.booking.com/hotel/us/row-nyc.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Huge budget base in the middle of everything; best location-per-dollar in the zone."
+  "notes": "Huge budget base in the middle of everything; best location-per-dollar in the zone.",
+  "parking": "valet",
+  "parking_cost": "$80/night valet ($90 SUV)",
+  "parking_note": "Self-park option $70/24h ($80 SUV) at iPark 790 8th Ave; no in/out privileges."
  },
  {
   "id": "hotel-edison",
@@ -42,7 +48,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "49th St N/R/W 3 min; 50th St 1 train 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Edison+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "1931 art-deco classic; Birdland jazz club 3 blocks - covers a Midtown jazz night on foot."
+  "notes": "1931 art-deco classic; Birdland jazz club 3 blocks - covers a Midtown jazz night on foot.",
+  "parking": "valet",
+  "parking_cost": "$75/night valet ($85 oversized)",
+  "parking_note": "Valet 6am-midnight, no in/out; self-park garage at 259 W 47th St $61/24h."
  },
  {
   "id": "yotel-new-york",
@@ -57,7 +66,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St-Port Authority 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=YOTEL+New+York+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Pod-style cabins; quieter 10th Ave edge with late-night Hell's Kitchen food for the 1am return."
+  "notes": "Pod-style cabins; quieter 10th Ave edge with late-night Hell's Kitchen food for the 1am return.",
+  "parking": "nearby_garage",
+  "parking_cost": "$50/24h garage next door (~$35 after $15/day guest credit)",
+  "parking_note": "Public garage adjacent at 475 W 41st St; +$15 oversized; facility fee includes $15/day parking credit."
  },
  {
   "id": "citizenm-times-square",
@@ -72,7 +84,10 @@
   "stars_or_class": "4-star compact",
   "walk_to_subway_note": "C/E and 1 at 50th St 1-3 min; 7th Av B/D/E 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=citizenM+New+York+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Tech-forward compact rooms + rooftop bar; B/D one block over for a one-seat ride to the stadium."
+  "notes": "Tech-forward compact rooms + rooftop bar; B/D one block over for a one-seat ride to the stadium.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No hotel parking; hotel points guests to SpotHero; closest garage 250 W 50th St."
  },
  {
   "id": "moxy-nyc-times-square",
@@ -87,7 +102,10 @@
   "stars_or_class": "3.5-star",
   "walk_to_subway_note": "34th St-Herald Sq B/D/F/M/N/Q/R/W 3 min; Penn 1/2/3 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Moxy+NYC+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Rooftop Magic Hour bar; Herald Sq B/D = one-seat train to Yankee Stadium."
+  "notes": "Rooftop Magic Hour bar; Herald Sq B/D = one-seat train to Yankee Stadium.",
+  "parking": "nearby_garage",
+  "parking_cost": "$50/24h sedan, $60 SUV (City Parking, 67 W 36th St)",
+  "parking_note": "Hotel-listed self-park garage; no in/out privileges; no valet."
  },
  {
   "id": "riu-plaza-manhattan-times-square",
@@ -102,7 +120,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "47-50th Sts Rockefeller Ctr B/D/F/M 2 min",
   "booking_url": "https://www.booking.com/hotel/us/riu-plaza-manhattan-times-square.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$230/nt seen (Booking, these dates); B/D at Rockefeller = direct train to the match."
+  "notes": "$230/nt seen (Booking, these dates); B/D at Rockefeller = direct train to the match.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "Hotel states it has no parking; public garages within a block, ~$22-28/day reserved via apps."
  },
  {
   "id": "the-knickerbocker",
@@ -117,7 +138,10 @@
   "stars_or_class": "5-star",
   "walk_to_subway_note": "Times Sq-42nd hub at the door (1/2/3/7/N/Q/R/W/S); Bryant Pk B/D/F/M 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Knickerbocker+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Luxury landmark directly over the Times Sq subway hub; rooftop St. Cloud bar; B/D 3 min for the stadium."
+  "notes": "Luxury landmark directly over the Times Sq subway hub; rooftop St. Cloud bar; B/D 3 min for the stadium.",
+  "parking": "valet",
+  "parking_cost": "$150/night valet ($160 oversized)",
+  "parking_note": "Valet garage at 150 W 38th St; per 24h plus tax."
  },
  {
   "id": "intercontinental-times-square",
@@ -132,7 +156,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "A/C/E 42nd St 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=InterContinental+New+York+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Full-service tower with high-floor views; 1 block from Birdland jazz club."
+  "notes": "Full-service tower with high-floor views; 1 block from Birdland jazz club.",
+  "parking": "nearby_garage",
+  "parking_cost": "$55/24h self-park ($80 SUV)",
+  "parking_note": "Valet discontinued per IHG; self-park garages on 44th St btwn 8th/9th Aves; no in/out."
  },
  {
   "id": "westin-times-square",
@@ -147,7 +174,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "A/C/E 42nd St across the street; Times Sq hub 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Westin+New+York+at+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Reliable big-box 4-star on 8th Ave; direct A/C/E plus easy B/D at Bryant Pk."
+  "notes": "Reliable big-box 4-star on 8th Ave; direct A/C/E plus easy B/D at Bryant Pk.",
+  "parking": "valet",
+  "parking_cost": "$95-101/night valet ($65/day self-park)",
+  "parking_note": "Off-site valet, 24h except midnight-6am, 30-min retrieval call; self-park 24/7."
  },
  {
   "id": "hyatt-centric-times-square",
@@ -162,7 +192,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "Times Sq-42nd hub 4 min; Rockefeller B/D/F/M 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hyatt+Centric+Times+Square+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Rooftop Bar 54; dead-center theater district, verified in Times Sq Alliance lodging directory."
+  "notes": "Rooftop Bar 54; dead-center theater district, verified in Times Sq Alliance lodging directory.",
+  "parking": "valet",
+  "parking_cost": "$95/night valet +tax ($105 SUV)",
+  "parking_note": "Fee applies per entry/retrieval - effectively no in/out privileges."
  },
  {
   "id": "the-chatwal",
@@ -177,7 +210,10 @@
   "stars_or_class": "5-star",
   "walk_to_subway_note": "Times Sq-42nd hub 4 min; Bryant Pk B/D/F/M 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Chatwal%2C+a+Luxury+Collection+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Art-deco Stanford White landmark; the Midtown splurge pick, steps from 44th St theaters."
+  "notes": "Art-deco Stanford White landmark; the Midtown splurge pick, steps from 44th St theaters.",
+  "parking": "valet",
+  "parking_cost": "$85/night valet ($95 SUV)",
+  "parking_note": "24/7 valet; $10/day discount for eligible loyalty members."
  },
  {
   "id": "aliz-hotel-times-square",
@@ -192,7 +228,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St-Port Authority 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Aliz+Hotel+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$215/nt seen (Booking, these dates); modern budget tower with Dear Irving rooftop."
+  "notes": "$215/nt seen (Booking, these dates); modern budget tower with Dear Irving rooftop.",
+  "parking": "valet",
+  "parking_cost": "$90/night valet +tax ($95 SUV, $100 oversized)",
+  "parking_note": "No in/out privileges; Park & Stay package takes up to 15% off."
  },
  {
   "id": "romer-hells-kitchen",
@@ -207,7 +246,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "C/E 50th St 1 min; 1 train 50th St 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Romer+Hell%27s+Kitchen+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$302/nt seen (Booking, these dates); stylish 2023 rebrand on HK restaurant row - easy 2am return."
+  "notes": "$302/nt seen (Booking, these dates); stylish 2023 rebrand on HK restaurant row - easy 2am return.",
+  "parking": "onsite",
+  "parking_cost": "$65/night ($45/night on Stay & Park package)",
+  "parking_note": "Garage adjacent to entrance at 851 8th Ave; no in/out; oversized vehicles extra."
  },
  {
   "id": "element-times-square-west",
@@ -222,7 +264,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St 5 min; 7 train 34th-Hudson Yards 8 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Element+New+York+Times+Square+West+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$215/nt seen (Booking, these dates); kitchenette rooms on a quiet block."
+  "notes": "$215/nt seen (Booking, these dates); kitchenette rooms on a quiet block.",
+  "parking": "nearby_garage",
+  "parking_cost": "~$76/day hotel-listed off-site; $25-35/day garages on 38th/39th via apps",
+  "parking_note": "No onsite parking; hotel off-site lot 0.2 mi, open 7am-midnight."
  },
  {
   "id": "courtyard-times-square-west",
@@ -237,7 +282,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 34th St-Penn 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Courtyard+New+York+Manhattan%2FTimes+Square+West+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$408/nt seen (Booking, these dates) - event-week pricing for the class; solid fallback if others sell out."
+  "notes": "$408/nt seen (Booking, these dates) - event-week pricing for the class; solid fallback if others sell out.",
+  "parking": "valet",
+  "parking_cost": "$90/day off-site valet",
+  "parking_note": "No onsite parking; self-park garages on W 38th/39th St steps away."
  },
  {
   "id": "la-quinta-times-square-south",
@@ -252,7 +300,10 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "A/C/E at Penn or Port Authority, each ~5 min",
   "booking_url": "https://www.booking.com/hotel/us/la-quinta-by-wyndham-manhattan-midtown.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$197/nt seen (Booking, these dates) incl. breakfast; pure value near Penn Station."
+  "notes": "$197/nt seen (Booking, these dates) incl. breakfast; pure value near Penn Station.",
+  "parking": "nearby_garage",
+  "parking_cost": "$55/night garage across street",
+  "parking_note": "Discounted guest rate at garage directly across W 38th St."
  },
  {
   "id": "luma-hotel-times-square",
@@ -267,7 +318,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "42nd St-Bryant Pk B/D/F/M 2 min; 7 train 5th Av 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=LUMA+Hotel+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$410/nt seen (Booking, these dates); quiet upscale boutique with one-seat D/B to the stadium."
+  "notes": "$410/nt seen (Booking, these dates); quiet upscale boutique with one-seat D/B to the stadium.",
+  "parking": "valet",
+  "parking_cost": "$85/night valet",
+  "parking_note": "No in/out privileges; self-parking package also offered."
  },
  {
   "id": "casablanca-hotel",
@@ -282,7 +336,10 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "Times Sq-42nd hub 2 min; Bryant Pk B/D/F/M 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Casablanca+Hotel+by+Library+Hotel+Collection+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$314/nt seen (Booking, these dates); Moroccan-themed boutique, 9.2 guest score, free evening wine."
+  "notes": "$314/nt seen (Booking, these dates); Moroccan-themed boutique, 9.2 guest score, free evening wine.",
+  "parking": "nearby_garage",
+  "parking_cost": "$30/24h guest rate ($45 van/oversized)",
+  "parking_note": "Adjacent garage just before the hotel; front desk validates claim ticket; no in/out."
  },
  {
   "id": "m-social-times-square",
@@ -297,7 +354,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "50th St 1/C/E 3 min; 7th Av B/D/E 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=M+Social+Hotel+Times+Square+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$219/nt seen (Booking, these dates); ex-Novotel with Broadway-view lounge - strong price for 52nd St."
+  "notes": "$219/nt seen (Booking, these dates); ex-Novotel with Broadway-view lounge - strong price for 52nd St.",
+  "parking": "valet",
+  "parking_cost": null,
+  "parking_note": "Valet via garage entrance on 52nd St; Park & Save package bundles parking for one standard car."
  },
  {
   "id": "new-yorker-hotel",
@@ -312,7 +372,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "34th St-Penn A/C/E across the street; 1/2/3 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+New+Yorker+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Art-deco icon at Penn; A uptown or B/D from Herald Sq to the stadium; big rooms for the price."
+  "notes": "Art-deco icon at Penn; A uptown or B/D from Herald Sq to the stadium; big rooms for the price.",
+  "parking": "nearby_garage",
+  "parking_cost": "$50/day self-park (Dock Parking, 1 Penn Plaza)",
+  "parking_note": "Off-site, per 24h, no in/out - retrieve by drop-off time on departure day."
  },
  {
   "id": "mandarin-oriental-ny",
@@ -327,7 +390,10 @@
   "stars_or_class": "5-star",
   "walk_to_subway_note": "59th St-Columbus Circle A/B/C/D/1 beneath the building",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Mandarin+Oriental%2C+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$1,195/nt seen (Booking, these dates); park-view luxury sitting directly on the D line to the stadium."
+  "notes": "$1,195/nt seen (Booking, these dates); park-view luxury sitting directly on the D line to the stadium.",
+  "parking": "valet",
+  "parking_cost": null,
+  "parking_note": "Valet offered to all guests, fee applies; rate not published."
  },
  {
   "id": "trump-international-ny",
@@ -342,7 +408,10 @@
   "stars_or_class": "5-star",
   "walk_to_subway_note": "Columbus Circle A/B/C/D/1 1 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Trump+International+Hotel+%26+Tower+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$705/nt seen (Booking, these dates); Jean-Georges downstairs, D train at the door."
+  "notes": "$705/nt seen (Booking, these dates); Jean-Georges downstairs, D train at the door.",
+  "parking": "valet",
+  "parking_cost": "$95/24h valet ($110 SUV, $115 oversized)",
+  "parking_note": "No in/out privileges."
  },
  {
   "id": "empire-hotel",
@@ -357,7 +426,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "66th St-Lincoln Ctr 1 train 2 min; Columbus Circle A/B/C/D 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Empire+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$176/nt seen (Booking, these dates) - big value; rooftop pool bar; walk to Dizzy's Club jazz at Columbus Circle."
+  "notes": "$176/nt seen (Booking, these dates) - big value; rooftop pool bar; walk to Dizzy's Club jazz at Columbus Circle.",
+  "parking": "valet",
+  "parking_cost": "$79+tax/24h valet ($89 SUV)",
+  "parking_note": "Self-park option: GGMC garage 10 W 66th St, guest rate $52/24h ($67 SUV, +$15 EV)."
  },
  {
   "id": "jw-marriott-essex-house",
@@ -372,7 +444,10 @@
   "stars_or_class": "5-star",
   "walk_to_subway_note": "57th St F 4 min; 57th-7th Av N/Q/R/W 3 min; Columbus Circle A/B/C/D 7 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=JW+Marriott+Essex+House+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Park-front art-deco classic; 8-min walk to Dizzy's Club for the Midtown jazz nights."
+  "notes": "Park-front art-deco classic; 8-min walk to Dizzy's Club for the Midtown jazz nights.",
+  "parking": "valet",
+  "parking_cost": "$105/24h valet ($115 SUV, $125 oversized)",
+  "parking_note": "No in/out privileges."
  },
  {
   "id": "the-wallace-hotel",
@@ -387,7 +462,10 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "79th St 1 train 3 min; 72nd St 1/2/3 express 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Wallace+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$519/nt seen (Booking, these dates); 9.3 guest score; quiet tree-lined block for late-night decompression."
+  "notes": "$519/nt seen (Booking, these dates); 9.3 guest score; quiet tree-lined block for late-night decompression.",
+  "parking": "valet",
+  "parking_cost": null,
+  "parking_note": "Valet-only parking via nearby private lot; rate not published."
  },
  {
   "id": "hotel-beacon",
@@ -402,7 +480,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "72nd St 1/2/3 express 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Beacon+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$248/nt seen (Booking, these dates); kitchenette rooms above the Beacon Theatre; 2 train one-seat to 149th-Grand Concourse then 4 one stop to the stadium."
+  "notes": "$248/nt seen (Booking, these dates); kitchenette rooms above the Beacon Theatre; 2 train one-seat to 149th-Grand Concourse then 4 one stop to the stadium.",
+  "parking": "nearby_garage",
+  "parking_cost": "~$31/day with hotel validation (guest-reported)",
+  "parking_note": "No onsite; garage across street discounts with hotel stamp; other area garages $45-59/day."
  },
  {
   "id": "the-lucerne",
@@ -417,7 +498,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "79th St 1 train 1 min; 81st St B/C 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Lucerne+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$220/nt seen (Booking, these dates); landmark UWS value in a beautiful 1904 building."
+  "notes": "$220/nt seen (Booking, these dates); landmark UWS value in a beautiful 1904 building.",
+  "parking": "valet",
+  "parking_cost": "$55/day",
+  "parking_note": "Hotel-listed parking $55/day; valet service available."
  },
  {
   "id": "hotel-belleclaire",
@@ -432,7 +516,10 @@
   "stars_or_class": "3.5-star",
   "walk_to_subway_note": "79th St 1 train 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Belleclaire+Central+Park+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$257/nt seen (Booking, these dates); historic Small Luxury Hotels property next to Zabar's."
+  "notes": "$257/nt seen (Booking, these dates); historic Small Luxury Hotels property next to Zabar's.",
+  "parking": "valet",
+  "parking_cost": "$83/24h valet ($93 SUV)",
+  "parking_note": "Valet 6am-11pm, no in/out; validated self-park at GMC Laureate, 2148 Broadway, $65/24h ($75 SUV)."
  },
  {
   "id": "arthouse-hotel-nyc",
@@ -447,7 +534,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "79th St 1 train 2 min; 81st St B/C 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Arthouse+Hotel+New+York+City+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$140 generic rate seen (hotelguides); artsy UWS boutique; B/C connects toward stadium-bound D."
+  "notes": "From-$140 generic rate seen (hotelguides); artsy UWS boutique; B/C connects toward stadium-bound D.",
+  "parking": "nearby_garage",
+  "parking_cost": "$75+tax/24h (Select Garage, 274 W 81st St)",
+  "parking_note": "Hotel's exclusive parking partner; special Arthouse rate."
  },
  {
   "id": "fairfield-inn-central-park",
@@ -462,7 +552,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "Columbus Circle A/B/C/D/1 6 min",
   "booking_url": "https://www.booking.com/hotel/us/fairfield-inn-suites-by-marriott-new-york-manhattan-central-park.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$313/nt seen (Booking, these dates) incl. breakfast; one-seat D from Columbus Circle to the stadium."
+  "notes": "$313/nt seen (Booking, these dates) incl. breakfast; one-seat D from Columbus Circle to the stadium.",
+  "parking": "nearby_garage",
+  "parking_cost": "~$40-60/night deck next door (validated; guest-reported)",
+  "parking_note": "Hotel stamps ticket for discount; GMC 440 W 57th St and Metropolis 838 11th Ave also listed."
  },
  {
   "id": "da-vinci-hotel",
@@ -477,7 +570,10 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "57th St N/Q/R/W 3 min; Columbus Circle 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Da+Vinci+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$277/nt seen (Booking, these dates); small Euro-style hotel two blocks from the park."
+  "notes": "$277/nt seen (Booking, these dates); small Euro-style hotel two blocks from the park.",
+  "parking": "nearby_garage",
+  "parking_cost": "$40/24h garage across street (~$26/day guest discount reported)",
+  "parking_note": "Impark garage across the street; van/SUV/oversized extra."
  },
  {
   "id": "west-side-ymca",
@@ -492,7 +588,10 @@
   "stars_or_class": "hostel-style",
   "walk_to_subway_note": "Columbus Circle A/B/C/D/1 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=West+Side+YMCA+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$125/nt seen (Booking, these dates); spartan shared-bath rooms but unbeatable corner + one-seat D to the stadium."
+  "notes": "$125/nt seen (Booking, these dates); spartan shared-bath rooms but unbeatable corner + one-seat D to the stadium.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No guest parking."
  },
  {
   "id": "riverside-tower-hotel",
@@ -507,7 +606,10 @@
   "stars_or_class": "2-star",
   "walk_to_subway_note": "79th St 1 train 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Riverside+Tower+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$109/nt seen (Booking, these dates); bare-bones budget with Hudson River views."
+  "notes": "$109/nt seen (Booking, these dates); bare-bones budget with Hudson River views.",
+  "parking": "none",
+  "parking_cost": "~$65/day self-park nearby",
+  "parking_note": "Hotel provides no parking; nearest garages around W 80th St."
  },
  {
   "id": "night-hotel-broadway",
@@ -522,7 +624,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "96th St 1/2/3 express 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Night+Hotel+Broadway+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$102 generic rate seen (hotelguides); near Smoke Jazz Club (106th/Broadway) for an off-list jazz night."
+  "notes": "From-$102 generic rate seen (hotelguides); near Smoke Jazz Club (106th/Broadway) for an off-list jazz night.",
+  "parking": "nearby_garage",
+  "parking_cost": "from $38/24h validated (STRELLA Parking, W 95th St)",
+  "parking_note": "Front-desk validation for discounted rate; price varies by vehicle size."
  },
  {
   "id": "washington-square-hotel",
@@ -537,7 +642,10 @@
   "stars_or_class": "3-star boutique",
   "walk_to_subway_note": "W 4th St A/B/C/D/E/F/M 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Washington+Square+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$342/nt seen (Booking, these dates); deco boutique on the park; Blue Note 3 blocks; W 4th St = one-seat D to Yankee Stadium."
+  "notes": "$342/nt seen (Booking, these dates); deco boutique on the park; Blue Note 3 blocks; W 4th St = one-seat D to Yankee Stadium.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No hotel parking; Village garages ~$25-55/day (Icon Brevoort, 20 E 9th St, is closest)."
  },
  {
   "id": "the-marlton",
@@ -552,7 +660,10 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "8th St N/R/W 2 min; W 4th St A/B/C/D/E/F/M 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Marlton+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$429/nt seen (Booking, these dates); Parisian-style 1900 landmark; Blue Note, Smalls, Village Vanguard all walkable."
+  "notes": "$429/nt seen (Booking, these dates); Parisian-style 1900 landmark; Blue Note, Smalls, Village Vanguard all walkable.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No onsite parking; nearest garages around 5th Ave & 8th St via SpotHero/Way."
  },
  {
   "id": "walker-hotel-greenwich-village",
@@ -567,7 +678,10 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "6th Av F/M/L 2 min; 14th St 1/2/3 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Walker+Hotel+Greenwich+Village+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$521/nt seen (Booking, these dates); gaslamp-era boutique; Village Vanguard a 6-min walk."
+  "notes": "$521/nt seen (Booking, these dates); gaslamp-era boutique; Village Vanguard a 6-min walk.",
+  "parking": "nearby_garage",
+  "parking_cost": "$35-55/day +tax self-park ($45-65 SUV)",
+  "parking_note": "No valet; hotel recommends nearby self-park garages, incl. a $35/day no-reservation option."
  },
  {
   "id": "standard-high-line",
@@ -582,7 +696,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "14th St A/C/E/L 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Standard%2C+High+Line+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$352/nt seen (Booking, these dates); glass slab over the High Line; A at 14th -> D at 145th for the stadium."
+  "notes": "$352/nt seen (Booking, these dates); glass slab over the High Line; A at 14th -> D at 145th for the stadium.",
+  "parking": "nearby_garage",
+  "parking_cost": "$65+tax/24h validated ($75 SUV)",
+  "parking_note": "Partner Icon garage, enter 385 W 15th or 386 W 16th; validate at front desk; no in/out; no valet."
  },
  {
   "id": "gansevoort-meatpacking",
@@ -597,7 +714,10 @@
   "stars_or_class": "5-star",
   "walk_to_subway_note": "14th St A/C/E/L 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Gansevoort+Meatpacking+NYC+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$787/nt seen (Booking, these dates); rooftop pool, nightlife epicenter a short walk from Village jazz."
+  "notes": "$787/nt seen (Booking, these dates); rooftop pool, nightlife epicenter a short walk from Village jazz.",
+  "parking": "valet",
+  "parking_cost": "$95/24h valet ($105 oversized)",
+  "parking_note": "Valet 7am-midnight; no in/out - re-entry fee if car pulled before 24h."
  },
  {
   "id": "maritime-hotel",
@@ -612,7 +732,10 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "14th St A/C/E/L 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Maritime+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Porthole-window ex-seafarers HQ (verified operating via official site); A/C/E for stadium with one transfer to D."
+  "notes": "Porthole-window ex-seafarers HQ (verified operating via official site); A/C/E for stadium with one transfer to D.",
+  "parking": "valet",
+  "parking_cost": "$115/day valet ($85/day self-park)",
+  "parking_note": "Covered parking at lot across the street; bellhop arranges valet."
  },
  {
   "id": "hotel-chelsea",
@@ -627,7 +750,10 @@
   "stars_or_class": "5-star boutique",
   "walk_to_subway_note": "23rd St 1 and C/E 1-2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Chelsea+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$720/nt seen (Booking, these dates); the legendary rock-and-roll landmark, superbly rebuilt; El Quijote downstairs."
+  "notes": "$720/nt seen (Booking, these dates); the legendary rock-and-roll landmark, superbly rebuilt; El Quijote downstairs.",
+  "parking": "nearby_garage",
+  "parking_cost": "$50/24h guest rate (garage at 51 W 22nd St)",
+  "parking_note": "Front desk provides voucher for preferred rate."
  },
  {
   "id": "leo-house",
@@ -642,7 +768,10 @@
   "stars_or_class": "guesthouse",
   "walk_to_subway_note": "23rd St C/E 1 min; 1 train 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Leo+House+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$236/nt seen (Booking, these dates); quiet Catholic guesthouse value with 24h desk - fine for late returns."
+  "notes": "$236/nt seen (Booking, these dates); quiet Catholic guesthouse value with 24h desk - fine for late returns.",
+  "parking": "nearby_garage",
+  "parking_cost": null,
+  "parking_note": "No hotel lot; hotel suggests Quick Park garage (212-352-0514); street parking possible certain hours."
  },
  {
   "id": "motto-chelsea",
@@ -657,7 +786,10 @@
   "stars_or_class": "4-star micro",
   "walk_to_subway_note": "23rd St F/M 2 min; 23rd St 1 and N/R/W 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Motto+by+Hilton+New+York+City+Chelsea+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$261/nt seen (Booking, these dates); new-build micro-rooms midway between Village jazz and Midtown."
+  "notes": "$261/nt seen (Booking, these dates); new-build micro-rooms midway between Village jazz and Midtown.",
+  "parking": "valet",
+  "parking_cost": "$85/day valet",
+  "parking_note": "Parking is off-site; front desk can arrange a discount."
  },
  {
   "id": "moxy-chelsea",
@@ -672,7 +804,10 @@
   "stars_or_class": "3.5-star",
   "walk_to_subway_note": "28th St 1 and N/R/W 2 min; Herald Sq B/D/F/M 7 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Moxy+NYC+Chelsea+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Flower-district tower with Fleur Room rooftop; Herald Sq B/D for a one-seat stadium ride."
+  "notes": "Flower-district tower with Fleur Room rooftop; Herald Sq B/D for a one-seat stadium ride.",
+  "parking": "valet",
+  "parking_cost": "$85/day valet (cars & SUVs)",
+  "parking_note": "Allow 45-60 min retrieval; loyalty members 30% off; in/out privileges cost extra."
  },
  {
   "id": "hyatt-house-chelsea",
@@ -687,7 +822,10 @@
   "stars_or_class": "3-star extended-stay",
   "walk_to_subway_note": "28th St 1/N/R 3 min; Herald Sq B/D/F/M 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hyatt+House+New+York%2FChelsea+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$269/nt seen (Booking, these dates); suite-style rooms with kitchens; easy B/D access."
+  "notes": "$269/nt seen (Booking, these dates); suite-style rooms with kitchens; easy B/D access.",
+  "parking": "valet",
+  "parking_cost": "$63+tax/night valet (reported)",
+  "parking_note": "Charged per 24h, no in/out privileges; no onsite parking."
  },
  {
   "id": "broadway-plaza-hotel",
@@ -702,7 +840,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "28th St N/R/W 1 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Broadway+Plaza+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$256/nt seen (Booking, these dates) with a 9.3 guest score - standout value between Union Sq and Midtown."
+  "notes": "$256/nt seen (Booking, these dates) with a 9.3 guest score - standout value between Union Sq and Midtown.",
+  "parking": "nearby_garage",
+  "parking_cost": "$35/24h guest rate ($50 oversized) at 7-11 W 28th St",
+  "parking_note": "Tell attendant you're a hotel guest / show invoice for the discounted rate."
  },
  {
   "id": "w-union-square",
@@ -717,7 +858,10 @@
   "stars_or_class": "4-star luxury",
   "walk_to_subway_note": "14th St-Union Sq 4/5/6/L/N/Q/R/W 1 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=W+New+York+-+Union+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$634/nt seen (Booking, these dates); Beaux-Arts landmark on the square; every line home at 2am."
+  "notes": "$634/nt seen (Booking, these dates); Beaux-Arts landmark on the square; every line home at 2am.",
+  "parking": "valet",
+  "parking_cost": "$100/day valet",
+  "parking_note": "Marriott-listed daily valet fee."
  },
  {
   "id": "hyatt-union-square",
@@ -732,7 +876,10 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "14th St-Union Sq hub 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hyatt+Union+Square+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$412/nt seen (Booking, these dates); 10-min walk to Village jazz clubs; L/N/Q/4/5/6 at the corner."
+  "notes": "$412/nt seen (Booking, these dates); 10-min walk to Village jazz clubs; L/N/Q/4/5/6 at the corner.",
+  "parking": "valet",
+  "parking_cost": "$75/night valet ($85 SUV, $90 oversized)",
+  "parking_note": "No in/out privileges; no onsite parking."
  },
  {
   "id": "freehand-new-york",
@@ -747,7 +894,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "23rd St 6 train 2 min; Union Sq hub 8 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Freehand+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$267/nt seen (Booking, these dates); hip budget-boutique with destination bars (Broken Shaker rooftop)."
+  "notes": "$267/nt seen (Booking, these dates); hip budget-boutique with destination bars (Broken Shaker rooftop).",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No valet or onsite parking; garages on E 24th St & 3rd Ave nearby."
  },
  {
   "id": "chelsea-inn",
@@ -762,7 +912,10 @@
   "stars_or_class": "2-star",
   "walk_to_subway_note": "14th St F/M/L/1/2/3 3 min; Union Sq 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Chelsea+Inn+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$128/nt seen (Booking, these dates) - cheapest Village-adjacent bed; simple walk-up, some shared baths."
+  "notes": "$128/nt seen (Booking, these dates) - cheapest Village-adjacent bed; simple walk-up, some shared baths.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No guest parking; booking sites note a discount arrangement at nearby facilities."
  },
  {
   "id": "umbrella-hotel-bronx",
@@ -777,7 +930,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "3rd Av-149th St 2/5 7 min; 149th St-Grand Concourse 2/4/5 one stop or 15-min walk",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Umbrella+Hotel+Bronx+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Named in the trip brief; modern budget tower ~1 mi from the stadium; take 2 to 149th-GC then 4 one stop."
+  "notes": "Named in the trip brief; modern budget tower ~1 mi from the stadium; take 2 to 149th-GC then 4 one stop.",
+  "parking": "onsite",
+  "parking_cost": null,
+  "parking_note": "On-site private lot but very limited (~4-6 spots, first-come); sources conflict on free vs paid - confirm with hotel. POSSIBLY FREE."
  },
  {
   "id": "opera-house-hotel",
@@ -792,7 +948,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "3rd Av-149th St 2/5 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Opera+House+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$161 rate seen (hotelguides); converted 1913 Bronx Opera House - the best-reviewed stadium-area indie."
+  "notes": "From-$161 rate seen (hotelguides); converted 1913 Bronx Opera House - the best-reviewed stadium-area indie.",
+  "parking": "onsite",
+  "parking_cost": "FREE (5 spots, first-come); else $15-20/day garage nearby",
+  "parking_note": "Hotel FAQ: complimentary if a spot is open on arrival; otherwise directed to neighborhood garage, no in/out."
  },
  {
   "id": "comfort-inn-near-stadium",
@@ -807,7 +966,10 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "3rd Av-138th St 6 train 3 min; stadium via short cab/Bx bus",
   "booking_url": "https://www.booking.com/hotel/us/comfort-inn-suites-near-stadium.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$209 rate seen (hotelguides); free breakfast; transit to Village nightlife is slower (6 train side)."
+  "notes": "From-$209 rate seen (hotelguides); free breakfast; transit to Village nightlife is slower (6 train side).",
+  "parking": "onsite",
+  "parking_cost": "~$15-40/night (sources conflict)",
+  "parking_note": "On-site lot, limited spaces; $15/night outdoor per one listing, $40 self-park per another - confirm with hotel."
  },
  {
   "id": "super-8-bronx-stadium",
@@ -822,7 +984,10 @@
   "stars_or_class": "2-star",
   "walk_to_subway_note": "161st St-Yankee Stadium B/D/4 6 min walk",
   "booking_url": "https://www.booking.com/hotel/us/super-8-by-wyndham-bronx-near-stadium.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$111 seen (Booking landmark page); closest cheap bed to the gate (1,850 ft); D train home after Village jazz."
+  "notes": "From-$111 seen (Booking landmark page); closest cheap bed to the gate (1,850 ft); D train home after Village jazz.",
+  "parking": "none",
+  "parking_cost": null,
+  "parking_note": "No hotel lot; paid public lot ~1 block away (guest-reported)."
  },
  {
   "id": "holiday-inn-express-stadium",
@@ -837,7 +1002,10 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "149th St-Grand Concourse 2/4/5 8 min; 4 train one stop to 161st",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Holiday+Inn+Express+NYC+Yankee+Stadium+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$135 rate seen (hotelguides); newer build with breakfast; ~20-min walk to the stadium."
+  "notes": "From-$135 rate seen (hotelguides); newer build with breakfast; ~20-min walk to the stadium.",
+  "parking": "onsite",
+  "parking_cost": "$45/day",
+  "parking_note": "Private on-site parking."
  },
  {
   "id": "best-western-stadium-inn",
@@ -852,7 +1020,10 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "~0.4 mi walk to stadium via Macombs Dam Bridge; 161st St B/D/4 ~12 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Best+Western+Plus+Stadium+Inn+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$207 rate seen (hotelguides); walk-to-game option, but thin transit for the Manhattan jazz nights."
+  "notes": "From-$207 rate seen (hotelguides); walk-to-game option, but thin transit for the Manhattan jazz nights.",
+  "parking": "onsite",
+  "parking_cost": "FREE (9 spots, first-come)",
+  "parking_note": "Free but limited; overflow garage a few blocks away. CAUTION: Yelp marks this property CLOSED (June 2026) - verify before booking."
  },
  {
   "id": "wingate-bronx-haven-park",
@@ -867,7 +1038,10 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "Melrose Metro-North 3 min; 3rd Av-149th St 2/5 8 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Wingate+by+Wyndham+Bronx+Haven+Park+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$222 rate seen (hotelguides, 'Very High' guest rating); newer build ~1 mi from the stadium."
+  "notes": "From-$222 rate seen (hotelguides, 'Very High' guest rating); newer build ~1 mi from the stadium.",
+  "parking": "valet",
+  "parking_cost": "$30-35/day valet",
+  "parking_note": "24/7 on-site valet run by third party; in/out privileges included."
  },
  {
   "id": "aloft-harlem",
@@ -882,7 +1056,10 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "125th St A/B/C/D 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Aloft+Harlem+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$182/nt seen (Booking, these dates); best transit fit in the value zone - one-seat D to the match AND one-seat A/D home from W 4th St jazz."
+  "notes": "$182/nt seen (Booking, these dates); best transit fit in the value zone - one-seat D to the match AND one-seat A/D home from W 4th St jazz.",
+  "parking": "valet",
+  "parking_cost": "$53/day valet",
+  "parking_note": "On-site valet, sedans only, no in/out privileges."
  },
  {
   "id": "renaissance-harlem",
@@ -897,6 +1074,9 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "125th St A/B/C/D 4 min; 125th St 2/3 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Renaissance+New+York+Harlem+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$183/nt seen (Booking, these dates) - 4-star polish at a $$ price near the Apollo; D train direct to the stadium."
+  "notes": "$183/nt seen (Booking, these dates) - 4-star polish at a $$ price near the Apollo; D train direct to the stadium.",
+  "parking": "nearby_garage",
+  "parking_cost": null,
+  "parking_note": "No onsite parking; Harlem Renaissance Garage at 232 W 126th St (covered, valet-operated) one block away."
  }
 ]
