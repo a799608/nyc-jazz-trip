@@ -73,7 +73,10 @@
     .addTo(map).bindTooltip('Port Authority — Martz from Wilkes-Barre', { direction: 'right', offset: [10,0] });
 
   var BAND_COLOR = { '$': '#2e7d32', '$$': '#1565c0', '$$$': '#7b1fa2', '$$$$': '#b71c1c' };
-  var state = { maxBand: '$$$', martz: false, night: 'both', venueStyle: 'no_basement', driving: true };
+  var state = { maxBand: '$$$', martz: false, night: 'both', venueStyle: 'no_basement', driving: false, needAvail: true };
+  function availDataExists() {
+    return hotels.some(function (h) { return 'available_jul29' in h; });
+  }
   function parkingOk(h) {
     if (!state.driving) return true;
     if (!('parking' in h) || h.parking == null) return true;   // unverified: show, labeled in popup
@@ -160,6 +163,7 @@
       if (!parkingOk(h)) return;
       if (excluded[h.id]) return;
       if (h.available_jul29 === false) return;   // confirmed sold out for these dates
+      if (state.needAvail && availDataExists() && h.available_jul29 !== true) return;  // strict: confirmed rooms only
       kept++;
       var top3 = i < 3;
       var m = L.circleMarker([h.lat, h.lng], {
@@ -226,7 +230,8 @@
   ctl.onAdd = function () {
     var d = L.DomUtil.create('div', 'panel');
     d.innerHTML = '<h3>NYC: Liverpool + Jazz<br><span class="muted">Wed Jul 29 → Fri Jul 31</span></h3>' +
-      '<label><input type="checkbox" id="c-driving" checked> 🚗 Driving (hotels must offer parking)</label><br>' +
+      '<label><input type="checkbox" id="c-avail" checked> ✓ Only hotels with confirmed availability</label><br>' +
+      '<label><input type="checkbox" id="c-driving"> 🚗 Need hotel parking (off — car parks in Secaucus)</label><br>' +
       '<label><input type="checkbox" id="c-martz"> Arriving by Martz bus (favor Port Authority area)</label><br>' +
       'Max hotel price: <select id="c-band"><option value="$">$</option><option value="$$">$$</option><option value="$$$" selected>$$$</option><option value="$$$$">$$$$</option></select><br>' +
       'Jazz pins: <select id="c-night"><option value="both" selected>both nights</option><option value="wednesday">Wed only</option><option value="thursday">Thu only</option></select><br>' +
@@ -271,6 +276,7 @@
   }
 
   function wire() {
+    document.getElementById('c-avail').addEventListener('change', function (e) { state.needAvail = e.target.checked; render(); });
     document.getElementById('c-driving').addEventListener('change', function (e) { state.driving = e.target.checked; render(); });
     document.getElementById('c-martz').addEventListener('change', function (e) { state.martz = e.target.checked; render(); });
     document.getElementById('c-band').addEventListener('change', function (e) { state.maxBand = e.target.value; render(); });
