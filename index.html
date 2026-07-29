@@ -73,7 +73,12 @@
     .addTo(map).bindTooltip('Port Authority — Martz from Wilkes-Barre', { direction: 'right', offset: [10,0] });
 
   var BAND_COLOR = { '$': '#2e7d32', '$$': '#1565c0', '$$$': '#7b1fa2', '$$$$': '#b71c1c' };
-  var state = { maxBand: '$$$', martz: true, night: 'both', venueStyle: 'no_basement' };
+  var state = { maxBand: '$$$', martz: false, night: 'both', venueStyle: 'no_basement', driving: true };
+  function parkingOk(h) {
+    if (!state.driving) return true;
+    if (!('parking' in h) || h.parking == null) return true;   // unverified: show, labeled in popup
+    return h.parking !== 'none';
+  }
   // venueStyle: 'no_basement' (dinner+laid-back, hide small basements) | 'dinner_show' | 'laid_back' | 'all'
   function venuePass(s) {
     var t = s.venue_type;
@@ -106,6 +111,11 @@
       (h.est_nightly_usd ? ' &middot; ~$' + h.est_nightly_usd + '/nt' : '') +
       (h.stars_or_class ? ' &middot; ' + esc(h.stars_or_class) : '') + '<br>' +
       '<span class="muted">' + esc(h.walk_to_subway_note || '') + '</span><br>' +
+      ('parking' in h ? (h.parking && h.parking !== 'none'
+          ? '<b>🚗 Parking:</b> ' + esc(h.parking_cost || h.parking) + (h.parking_note ? ' — ' + esc(h.parking_note) : '') + '<br>'
+          : (h.parking === 'none' ? '<b style="color:#b71c1c">🚗 No parking offered</b><br>'
+                                  : '<span class="muted">🚗 parking unverified — call ahead</span><br>'))
+        : '') +
       esc(h.notes || '') + '<br>' +
       '<a class="htl-book" href="' + esc(h.booking_url) + '" target="_blank" rel="noopener">Book Jul 29&ndash;31</a>';
     return html;
@@ -128,6 +138,7 @@
     var kept = 0;
     ranked.forEach(function (h, i) {
       if (bandRank(h.price_band) > bandRank(state.maxBand)) return;
+      if (!parkingOk(h)) return;
       kept++;
       var top3 = i < 3;
       var m = L.circleMarker([h.lat, h.lng], {
@@ -190,7 +201,8 @@
   ctl.onAdd = function () {
     var d = L.DomUtil.create('div', 'panel');
     d.innerHTML = '<h3>NYC: Liverpool + Jazz<br><span class="muted">Wed Jul 29 → Fri Jul 31</span></h3>' +
-      '<label><input type="checkbox" id="c-martz" checked> Arriving by Martz bus (favor Port Authority area)</label><br>' +
+      '<label><input type="checkbox" id="c-driving" checked> 🚗 Driving (hotels must offer parking)</label><br>' +
+      '<label><input type="checkbox" id="c-martz"> Arriving by Martz bus (favor Port Authority area)</label><br>' +
       'Max hotel price: <select id="c-band"><option value="$">$</option><option value="$$">$$</option><option value="$$$" selected>$$$</option><option value="$$$$">$$$$</option></select><br>' +
       'Jazz pins: <select id="c-night"><option value="both" selected>both nights</option><option value="wednesday">Wed only</option><option value="thursday">Thu only</option></select><br>' +
       'Venue style: <select id="c-style"><option value="no_basement" selected>dinner + laid-back (no tiny basements)</option><option value="dinner_show">🍽 dinner &amp; show only</option><option value="laid_back">🛋 laid-back only</option><option value="all">everything (incl. basements)</option></select>' +
@@ -234,6 +246,7 @@
   }
 
   function wire() {
+    document.getElementById('c-driving').addEventListener('change', function (e) { state.driving = e.target.checked; render(); });
     document.getElementById('c-martz').addEventListener('change', function (e) { state.martz = e.target.checked; render(); });
     document.getElementById('c-band').addEventListener('change', function (e) { state.maxBand = e.target.value; render(); });
     document.getElementById('c-night').addEventListener('change', function (e) { state.night = e.target.value; render(); });
