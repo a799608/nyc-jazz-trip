@@ -8,14 +8,15 @@
   "lat": 40.758433,
   "lng": -73.993071,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 232,
   "stars_or_class": "3-star micro",
   "walk_to_subway_note": "A/C/E at 42nd St-Port Authority 2 min; Times Sq-42nd hub (1/2/3/7/N/Q/R/W/S) 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Pod+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Micro-room budget-chic with rooftop bar; B/D at Bryant Pk 10 min for one-seat D to Yankee Stadium.",
+  "notes": "Micro-room budget-chic with rooftop bar; B/D at Bryant Pk 10 min for one-seat D to Yankee Stadium. live rate 7/29 $232/nt (Google, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$57/24h garage nearby ($67 SUV)",
-  "parking_note": "No hotel parking or valet; guests use iPark at 350 W 42nd St, 1 block away; no in/out privileges."
+  "parking_note": "No hotel parking or valet; guests use iPark at 350 W 42nd St, 1 block away; no in/out privileges.",
+  "available_jul29": true
  },
  {
   "id": "row-nyc",
@@ -26,14 +27,15 @@
   "lat": 40.758713,
   "lng": -73.988298,
   "price_band": "$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 245,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St 1 min; Times Sq-42nd hub 4 min",
   "booking_url": "https://www.booking.com/hotel/us/row-nyc.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Huge budget base in the middle of everything; best location-per-dollar in the zone.",
+  "notes": "Huge budget base in the middle of everything; best location-per-dollar in the zone. live rate 7/29 $245/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$80/night valet ($90 SUV)",
-  "parking_note": "Self-park option $70/24h ($80 SUV) at iPark 790 8th Ave; no in/out privileges."
+  "parking_note": "Self-park option $70/24h ($80 SUV) at iPark 790 8th Ave; no in/out privileges.",
+  "available_jul29": true
  },
  {
   "id": "hotel-edison",
@@ -44,14 +46,15 @@
   "lat": 40.759647,
   "lng": -73.986294,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 269,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "49th St N/R/W 3 min; 50th St 1 train 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Edison+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "1931 art-deco classic; Birdland jazz club 3 blocks - covers a Midtown jazz night on foot.",
+  "notes": "1931 art-deco classic; Birdland jazz club 3 blocks - covers a Midtown jazz night on foot. live rate 7/29 $269/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$75/night valet ($85 oversized)",
-  "parking_note": "Valet 6am-midnight, no in/out; self-park garage at 259 W 47th St $61/24h."
+  "parking_note": "Valet 6am-midnight, no in/out; self-park garage at 259 W 47th St $61/24h.",
+  "available_jul29": true
  },
  {
   "id": "yotel-new-york",
@@ -62,14 +65,15 @@
   "lat": 40.759125,
   "lng": -73.9956,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 327,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St-Port Authority 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=YOTEL+New+York+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Pod-style cabins; quieter 10th Ave edge with late-night Hell's Kitchen food for the 1am return.",
+  "notes": "Pod-style cabins; quieter 10th Ave edge with late-night Hell's Kitchen food for the 1am return. live rate 7/29 $327/nt (Google, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$50/24h garage next door (~$35 after $15/day guest credit)",
-  "parking_note": "Public garage adjacent at 475 W 41st St; +$15 oversized; facility fee includes $15/day parking credit."
+  "parking_note": "Public garage adjacent at 475 W 41st St; +$15 oversized; facility fee includes $15/day parking credit.",
+  "available_jul29": true
  },
  {
   "id": "citizenm-times-square",
@@ -80,14 +84,15 @@
   "lat": 40.761566,
   "lng": -73.984966,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 383,
   "stars_or_class": "4-star compact",
   "walk_to_subway_note": "C/E and 1 at 50th St 1-3 min; 7th Av B/D/E 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=citizenM+New+York+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Tech-forward compact rooms + rooftop bar; B/D one block over for a one-seat ride to the stadium.",
+  "notes": "Tech-forward compact rooms + rooftop bar; B/D one block over for a one-seat ride to the stadium. live rate 7/29 $383/nt (Google, dates verified); bed config unverified.",
   "parking": "none",
   "parking_cost": null,
-  "parking_note": "No hotel parking; hotel points guests to SpotHero; closest garage 250 W 50th St."
+  "parking_note": "No hotel parking; hotel points guests to SpotHero; closest garage 250 W 50th St.",
+  "available_jul29": true
  },
  {
   "id": "moxy-nyc-times-square",
@@ -98,14 +103,15 @@
   "lat": 40.752393,
   "lng": -73.989301,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 409,
   "stars_or_class": "3.5-star",
   "walk_to_subway_note": "34th St-Herald Sq B/D/F/M/N/Q/R/W 3 min; Penn 1/2/3 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Moxy+NYC+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Rooftop Magic Hour bar; Herald Sq B/D = one-seat train to Yankee Stadium.",
+  "notes": "Rooftop Magic Hour bar; Herald Sq B/D = one-seat train to Yankee Stadium. live rate 7/29 $409/nt (Google, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$50/24h sedan, $60 SUV (City Parking, 67 W 36th St)",
-  "parking_note": "Hotel-listed self-park garage; no in/out privileges; no valet."
+  "parking_note": "Hotel-listed self-park garage; no in/out privileges; no valet.",
+  "available_jul29": true
  },
  {
   "id": "riu-plaza-manhattan-times-square",
@@ -116,14 +122,15 @@
   "lat": 40.758929,
   "lng": -73.983396,
   "price_band": "$$",
-  "est_nightly_usd": 230,
+  "est_nightly_usd": 332,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "47-50th Sts Rockefeller Ctr B/D/F/M 2 min",
   "booking_url": "https://www.booking.com/hotel/us/riu-plaza-manhattan-times-square.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$230/nt seen (Booking, these dates); B/D at Rockefeller = direct train to the match.",
+  "notes": "$230/nt seen (Booking, these dates); B/D at Rockefeller = direct train to the match. live rate 7/29 $332/nt (Google, dates verified); bed config unverified.",
   "parking": "none",
   "parking_cost": null,
-  "parking_note": "Hotel states it has no parking; public garages within a block, ~$22-28/day reserved via apps."
+  "parking_note": "Hotel states it has no parking; public garages within a block, ~$22-28/day reserved via apps.",
+  "available_jul29": true
  },
  {
   "id": "the-knickerbocker",
@@ -134,14 +141,15 @@
   "lat": 40.7554,
   "lng": -73.9866,
   "price_band": "$$$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 597,
   "stars_or_class": "5-star",
   "walk_to_subway_note": "Times Sq-42nd hub at the door (1/2/3/7/N/Q/R/W/S); Bryant Pk B/D/F/M 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Knickerbocker+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Luxury landmark directly over the Times Sq subway hub; rooftop St. Cloud bar; B/D 3 min for the stadium.",
+  "notes": "Luxury landmark directly over the Times Sq subway hub; rooftop St. Cloud bar; B/D 3 min for the stadium. live rate 7/29 $597/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$150/night valet ($160 oversized)",
-  "parking_note": "Valet garage at 150 W 38th St; per 24h plus tax."
+  "parking_note": "Valet garage at 150 W 38th St; per 24h plus tax.",
+  "available_jul29": true
  },
  {
   "id": "intercontinental-times-square",
@@ -152,14 +160,15 @@
   "lat": 40.758606,
   "lng": -73.989611,
   "price_band": "$$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 474,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "A/C/E 42nd St 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=InterContinental+New+York+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Full-service tower with high-floor views; 1 block from Birdland jazz club.",
+  "notes": "Full-service tower with high-floor views; 1 block from Birdland jazz club. live rate 7/29 $474/nt (Google sponsored official-site rate, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$55/24h self-park ($80 SUV)",
-  "parking_note": "Valet discontinued per IHG; self-park garages on 44th St btwn 8th/9th Aves; no in/out."
+  "parking_note": "Valet discontinued per IHG; self-park garages on 44th St btwn 8th/9th Aves; no in/out.",
+  "available_jul29": true
  },
  {
   "id": "westin-times-square",
@@ -170,14 +179,15 @@
   "lat": 40.757467,
   "lng": -73.988478,
   "price_band": "$$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 425,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "A/C/E 42nd St across the street; Times Sq hub 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Westin+New+York+at+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Reliable big-box 4-star on 8th Ave; direct A/C/E plus easy B/D at Bryant Pk.",
+  "notes": "Reliable big-box 4-star on 8th Ave; direct A/C/E plus easy B/D at Bryant Pk. live rate 7/29 $425/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$95-101/night valet ($65/day self-park)",
-  "parking_note": "Off-site valet, 24h except midnight-6am, 30-min retrieval call; self-park 24/7."
+  "parking_note": "Off-site valet, 24h except midnight-6am, 30-min retrieval call; self-park 24/7.",
+  "available_jul29": true
  },
  {
   "id": "hyatt-centric-times-square",
@@ -188,14 +198,15 @@
   "lat": 40.757572,
   "lng": -73.984022,
   "price_band": "$$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 443,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "Times Sq-42nd hub 4 min; Rockefeller B/D/F/M 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hyatt+Centric+Times+Square+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Rooftop Bar 54; dead-center theater district, verified in Times Sq Alliance lodging directory.",
+  "notes": "Rooftop Bar 54; dead-center theater district, verified in Times Sq Alliance lodging directory. live rate 7/29 $443/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$95/night valet +tax ($105 SUV)",
-  "parking_note": "Fee applies per entry/retrieval - effectively no in/out privileges."
+  "parking_note": "Fee applies per entry/retrieval - effectively no in/out privileges.",
+  "available_jul29": true
  },
  {
   "id": "the-chatwal",
@@ -206,14 +217,15 @@
   "lat": 40.75644,
   "lng": -73.984626,
   "price_band": "$$$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 645,
   "stars_or_class": "5-star",
   "walk_to_subway_note": "Times Sq-42nd hub 4 min; Bryant Pk B/D/F/M 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Chatwal%2C+a+Luxury+Collection+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Art-deco Stanford White landmark; the Midtown splurge pick, steps from 44th St theaters.",
+  "notes": "Art-deco Stanford White landmark; the Midtown splurge pick, steps from 44th St theaters. live rate 7/29 $645/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$85/night valet ($95 SUV)",
-  "parking_note": "24/7 valet; $10/day discount for eligible loyalty members."
+  "parking_note": "24/7 valet; $10/day discount for eligible loyalty members.",
+  "available_jul29": true
  },
  {
   "id": "aliz-hotel-times-square",
@@ -224,14 +236,15 @@
   "lat": 40.756118,
   "lng": -73.991687,
   "price_band": "$$",
-  "est_nightly_usd": 215,
+  "est_nightly_usd": 277,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St-Port Authority 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Aliz+Hotel+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$215/nt seen (Booking, these dates); modern budget tower with Dear Irving rooftop.",
+  "notes": "$215/nt seen (Booking, these dates); modern budget tower with Dear Irving rooftop. live rate 7/29 $277/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$90/night valet +tax ($95 SUV, $100 oversized)",
-  "parking_note": "No in/out privileges; Park & Stay package takes up to 15% off."
+  "parking_note": "No in/out privileges; Park & Stay package takes up to 15% off.",
+  "available_jul29": true
  },
  {
   "id": "romer-hells-kitchen",
@@ -242,14 +255,15 @@
   "lat": 40.763364,
   "lng": -73.985693,
   "price_band": "$$$",
-  "est_nightly_usd": 302,
+  "est_nightly_usd": 374,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "C/E 50th St 1 min; 1 train 50th St 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Romer+Hell%27s+Kitchen+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$302/nt seen (Booking, these dates); stylish 2023 rebrand on HK restaurant row - easy 2am return.",
+  "notes": "$302/nt seen (Booking, these dates); stylish 2023 rebrand on HK restaurant row - easy 2am return. live rate 7/29 $374/nt (Google, dates verified); bed config unverified.",
   "parking": "onsite",
   "parking_cost": "$65/night ($45/night on Stay & Park package)",
-  "parking_note": "Garage adjacent to entrance at 851 8th Ave; no in/out; oversized vehicles extra."
+  "parking_note": "Garage adjacent to entrance at 851 8th Ave; no in/out; oversized vehicles extra.",
+  "available_jul29": true
  },
  {
   "id": "element-times-square-west",
@@ -260,14 +274,15 @@
   "lat": 40.755803,
   "lng": -73.991812,
   "price_band": "$$",
-  "est_nightly_usd": 215,
+  "est_nightly_usd": 361,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 42nd St 5 min; 7 train 34th-Hudson Yards 8 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Element+New+York+Times+Square+West+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$215/nt seen (Booking, these dates); kitchenette rooms on a quiet block.",
+  "notes": "$215/nt seen (Booking, these dates); kitchenette rooms on a quiet block. live rate 7/29 $361/nt (Google, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "~$76/day hotel-listed off-site; $25-35/day garages on 38th/39th via apps",
-  "parking_note": "No onsite parking; hotel off-site lot 0.2 mi, open 7am-midnight."
+  "parking_note": "No onsite parking; hotel off-site lot 0.2 mi, open 7am-midnight.",
+  "available_jul29": true
  },
  {
   "id": "courtyard-times-square-west",
@@ -278,14 +293,15 @@
   "lat": 40.754498,
   "lng": -73.992556,
   "price_band": "$$$",
-  "est_nightly_usd": 408,
+  "est_nightly_usd": 394,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "A/C/E 34th St-Penn 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Courtyard+New+York+Manhattan%2FTimes+Square+West+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$408/nt seen (Booking, these dates) - event-week pricing for the class; solid fallback if others sell out.",
+  "notes": "$408/nt seen (Booking, these dates) - event-week pricing for the class; solid fallback if others sell out. live rate 7/29 $394/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$90/day off-site valet",
-  "parking_note": "No onsite parking; self-park garages on W 38th/39th St steps away."
+  "parking_note": "No onsite parking; self-park garages on W 38th/39th St steps away.",
+  "available_jul29": true
  },
  {
   "id": "la-quinta-times-square-south",
@@ -296,14 +312,15 @@
   "lat": 40.755518,
   "lng": -73.993053,
   "price_band": "$$",
-  "est_nightly_usd": 197,
+  "est_nightly_usd": 333,
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "A/C/E at Penn or Port Authority, each ~5 min",
   "booking_url": "https://www.booking.com/hotel/us/la-quinta-by-wyndham-manhattan-midtown.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$197/nt seen (Booking, these dates) incl. breakfast; pure value near Penn Station.",
+  "notes": "$197/nt seen (Booking, these dates) incl. breakfast; pure value near Penn Station. live rate 7/29 $333/nt (Google, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$55/night garage across street",
-  "parking_note": "Discounted guest rate at garage directly across W 38th St."
+  "parking_note": "Discounted guest rate at garage directly across W 38th St.",
+  "available_jul29": true
  },
  {
   "id": "luma-hotel-times-square",
@@ -314,14 +331,15 @@
   "lat": 40.75442,
   "lng": -73.985774,
   "price_band": "$$$",
-  "est_nightly_usd": 410,
+  "est_nightly_usd": 854,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "42nd St-Bryant Pk B/D/F/M 2 min; 7 train 5th Av 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=LUMA+Hotel+Times+Square+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$410/nt seen (Booking, these dates); quiet upscale boutique with one-seat D/B to the stadium.",
+  "notes": "$410/nt seen (Booking, these dates); quiet upscale boutique with one-seat D/B to the stadium. live rate 7/29 $854/nt (Google); only 1-King suite rates surfaced for these dates.",
   "parking": "valet",
   "parking_cost": "$85/night valet",
-  "parking_note": "No in/out privileges; self-parking package also offered."
+  "parking_note": "No in/out privileges; self-parking package also offered.",
+  "available_jul29": "one_bed_only"
  },
  {
   "id": "casablanca-hotel",
@@ -336,10 +354,11 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "Times Sq-42nd hub 2 min; Bryant Pk B/D/F/M 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Casablanca+Hotel+by+Library+Hotel+Collection+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$314/nt seen (Booking, these dates); Moroccan-themed boutique, 9.2 guest score, free evening wine.",
+  "notes": "$314/nt seen (Booking, these dates); Moroccan-themed boutique, 9.2 guest score, free evening wine. SOLD OUT 7/29-31: Google date-set page shows OTA room rows with no prices for these dates.",
   "parking": "nearby_garage",
   "parking_cost": "$30/24h guest rate ($45 van/oversized)",
-  "parking_note": "Adjacent garage just before the hotel; front desk validates claim ticket; no in/out."
+  "parking_note": "Adjacent garage just before the hotel; front desk validates claim ticket; no in/out.",
+  "available_jul29": false
  },
  {
   "id": "m-social-times-square",
@@ -350,14 +369,15 @@
   "lat": 40.762759,
   "lng": -73.983591,
   "price_band": "$$",
-  "est_nightly_usd": 219,
+  "est_nightly_usd": 387,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "50th St 1/C/E 3 min; 7th Av B/D/E 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=M+Social+Hotel+Times+Square+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$219/nt seen (Booking, these dates); ex-Novotel with Broadway-view lounge - strong price for 52nd St.",
+  "notes": "$219/nt seen (Booking, these dates); ex-Novotel with Broadway-view lounge - strong price for 52nd St. live rate 7/29 $387/nt (Google); only 1-King rates surfaced for these dates.",
   "parking": "valet",
   "parking_cost": null,
-  "parking_note": "Valet via garage entrance on 52nd St; Park & Save package bundles parking for one standard car."
+  "parking_note": "Valet via garage entrance on 52nd St; Park & Save package bundles parking for one standard car.",
+  "available_jul29": "one_bed_only"
  },
  {
   "id": "new-yorker-hotel",
@@ -368,14 +388,15 @@
   "lat": 40.752606,
   "lng": -73.994069,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 503,
   "stars_or_class": "3-star",
   "walk_to_subway_note": "34th St-Penn A/C/E across the street; 1/2/3 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+New+Yorker+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Art-deco icon at Penn; A uptown or B/D from Herald Sq to the stadium; big rooms for the price.",
+  "notes": "Art-deco icon at Penn; A uptown or B/D from Herald Sq to the stadium; big rooms for the price. live rate 7/29 $503/nt (Google, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$50/day self-park (Dock Parking, 1 Penn Plaza)",
-  "parking_note": "Off-site, per 24h, no in/out - retrieve by drop-off time on departure day."
+  "parking_note": "Off-site, per 24h, no in/out - retrieve by drop-off time on departure day.",
+  "available_jul29": true
  },
  {
   "id": "mandarin-oriental-ny",
@@ -386,14 +407,15 @@
   "lat": 40.76901,
   "lng": -73.982912,
   "price_band": "$$$$",
-  "est_nightly_usd": 1195,
+  "est_nightly_usd": 1269,
   "stars_or_class": "5-star",
   "walk_to_subway_note": "59th St-Columbus Circle A/B/C/D/1 beneath the building",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Mandarin+Oriental%2C+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$1,195/nt seen (Booking, these dates); park-view luxury sitting directly on the D line to the stadium.",
+  "notes": "$1,195/nt seen (Booking, these dates); park-view luxury sitting directly on the D line to the stadium. live rate 7/29 $1269/nt (Google); only single/1-King rooms surfaced for these dates.",
   "parking": "valet",
   "parking_cost": null,
-  "parking_note": "Valet offered to all guests, fee applies; rate not published."
+  "parking_note": "Valet offered to all guests, fee applies; rate not published.",
+  "available_jul29": "one_bed_only"
  },
  {
   "id": "trump-international-ny",
@@ -404,14 +426,15 @@
   "lat": 40.769147,
   "lng": -73.98154,
   "price_band": "$$$$",
-  "est_nightly_usd": 705,
+  "est_nightly_usd": 584,
   "stars_or_class": "5-star",
   "walk_to_subway_note": "Columbus Circle A/B/C/D/1 1 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Trump+International+Hotel+%26+Tower+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$705/nt seen (Booking, these dates); Jean-Georges downstairs, D train at the door.",
+  "notes": "$705/nt seen (Booking, these dates); Jean-Georges downstairs, D train at the door. live rate 7/29 $584/nt (Google, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$95/24h valet ($110 SUV, $115 oversized)",
-  "parking_note": "No in/out privileges."
+  "parking_note": "No in/out privileges.",
+  "available_jul29": true
  },
  {
   "id": "empire-hotel",
@@ -422,14 +445,15 @@
   "lat": 40.771337,
   "lng": -73.9826,
   "price_band": "$$",
-  "est_nightly_usd": 176,
+  "est_nightly_usd": 736,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "66th St-Lincoln Ctr 1 train 2 min; Columbus Circle A/B/C/D 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Empire+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$176/nt seen (Booking, these dates) - big value; rooftop pool bar; walk to Dizzy's Club jazz at Columbus Circle.",
+  "notes": "$176/nt seen (Booking, these dates) - big value; rooftop pool bar; walk to Dizzy's Club jazz at Columbus Circle. live rate 7/29 $736/nt (Google, dates verified; heavy surge vs usual); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$79+tax/24h valet ($89 SUV)",
-  "parking_note": "Self-park option: GGMC garage 10 W 66th St, guest rate $52/24h ($67 SUV, +$15 EV)."
+  "parking_note": "Self-park option: GGMC garage 10 W 66th St, guest rate $52/24h ($67 SUV, +$15 EV).",
+  "available_jul29": true
  },
  {
   "id": "jw-marriott-essex-house",
@@ -440,14 +464,15 @@
   "lat": 40.766174,
   "lng": -73.97851,
   "price_band": "$$$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 824,
   "stars_or_class": "5-star",
   "walk_to_subway_note": "57th St F 4 min; 57th-7th Av N/Q/R/W 3 min; Columbus Circle A/B/C/D 7 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=JW+Marriott+Essex+House+New+York+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "Park-front art-deco classic; 8-min walk to Dizzy's Club for the Midtown jazz nights.",
+  "notes": "Park-front art-deco classic; 8-min walk to Dizzy's Club for the Midtown jazz nights. live rate 7/29 $824/nt (Google); only 1-King rooms surfaced ($968+ at OTAs) for these dates.",
   "parking": "valet",
   "parking_cost": "$105/24h valet ($115 SUV, $125 oversized)",
-  "parking_note": "No in/out privileges."
+  "parking_note": "No in/out privileges.",
+  "available_jul29": "one_bed_only"
  },
  {
   "id": "the-wallace-hotel",
@@ -462,10 +487,11 @@
   "stars_or_class": "4-star boutique",
   "walk_to_subway_note": "79th St 1 train 3 min; 72nd St 1/2/3 express 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Wallace+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$519/nt seen (Booking, these dates); 9.3 guest score; quiet tree-lined block for late-night decompression.",
+  "notes": "$519/nt seen (Booking, these dates); 9.3 guest score; quiet tree-lined block for late-night decompression. SOLD OUT 7/29-31: Google offers alt dates Aug 1-3 at $345 instead.",
   "parking": "valet",
   "parking_cost": null,
-  "parking_note": "Valet-only parking via nearby private lot; rate not published."
+  "parking_note": "Valet-only parking via nearby private lot; rate not published.",
+  "available_jul29": false
  },
  {
   "id": "hotel-beacon",
@@ -480,10 +506,11 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "72nd St 1/2/3 express 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Beacon+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$248/nt seen (Booking, these dates); kitchenette rooms above the Beacon Theatre; 2 train one-seat to 149th-Grand Concourse then 4 one stop to the stadium.",
+  "notes": "$248/nt seen (Booking, these dates); kitchenette rooms above the Beacon Theatre; 2 train one-seat to 149th-Grand Concourse then 4 one stop to the stadium. SOLD OUT 7/29-31: Google offers alt dates Jul 30-Aug 1 at $449 (tonight 7/29 is the blocker).",
   "parking": "nearby_garage",
   "parking_cost": "~$31/day with hotel validation (guest-reported)",
-  "parking_note": "No onsite; garage across street discounts with hotel stamp; other area garages $45-59/day."
+  "parking_note": "No onsite; garage across street discounts with hotel stamp; other area garages $45-59/day.",
+  "available_jul29": false
  },
  {
   "id": "the-lucerne",
@@ -498,10 +525,11 @@
   "stars_or_class": "4-star",
   "walk_to_subway_note": "79th St 1 train 1 min; 81st St B/C 4 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=The+Lucerne+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$220/nt seen (Booking, these dates); landmark UWS value in a beautiful 1904 building.",
+  "notes": "$220/nt seen (Booking, these dates); landmark UWS value in a beautiful 1904 building. SOLD OUT 7/29-31: Google offers alt dates Jul 30-Aug 1 at $464 (tonight 7/29 is the blocker).",
   "parking": "valet",
   "parking_cost": "$55/day",
-  "parking_note": "Hotel-listed parking $55/day; valet service available."
+  "parking_note": "Hotel-listed parking $55/day; valet service available.",
+  "available_jul29": false
  },
  {
   "id": "hotel-belleclaire",
@@ -512,14 +540,15 @@
   "lat": 40.782375,
   "lng": -73.981172,
   "price_band": "$$",
-  "est_nightly_usd": 257,
+  "est_nightly_usd": 426,
   "stars_or_class": "3.5-star",
   "walk_to_subway_note": "79th St 1 train 2 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Hotel+Belleclaire+Central+Park+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$257/nt seen (Booking, these dates); historic Small Luxury Hotels property next to Zabar's.",
+  "notes": "$257/nt seen (Booking, these dates); historic Small Luxury Hotels property next to Zabar's. live rate 7/29 $426/nt (Google card, dates verified); bed config unverified.",
   "parking": "valet",
   "parking_cost": "$83/24h valet ($93 SUV)",
-  "parking_note": "Valet 6am-11pm, no in/out; validated self-park at GMC Laureate, 2148 Broadway, $65/24h ($75 SUV)."
+  "parking_note": "Valet 6am-11pm, no in/out; validated self-park at GMC Laureate, 2148 Broadway, $65/24h ($75 SUV).",
+  "available_jul29": true
  },
  {
   "id": "arthouse-hotel-nyc",
@@ -530,14 +559,15 @@
   "lat": 40.78217,
   "lng": -73.980483,
   "price_band": "$$",
-  "est_nightly_usd": null,
+  "est_nightly_usd": 407,
   "stars_or_class": "4-star",
   "walk_to_subway_note": "79th St 1 train 2 min; 81st St B/C 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Arthouse+Hotel+New+York+City+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "From-$140 generic rate seen (hotelguides); artsy UWS boutique; B/C connects toward stadium-bound D.",
+  "notes": "From-$140 generic rate seen (hotelguides); artsy UWS boutique; B/C connects toward stadium-bound D. live rate 7/29 $407/nt (Google card, dates verified); bed config unverified.",
   "parking": "nearby_garage",
   "parking_cost": "$75+tax/24h (Select Garage, 274 W 81st St)",
-  "parking_note": "Hotel's exclusive parking partner; special Arthouse rate."
+  "parking_note": "Hotel's exclusive parking partner; special Arthouse rate.",
+  "available_jul29": true
  },
  {
   "id": "fairfield-inn-central-park",
@@ -552,10 +582,11 @@
   "stars_or_class": "3-star",
   "walk_to_subway_note": "Columbus Circle A/B/C/D/1 6 min",
   "booking_url": "https://www.booking.com/hotel/us/fairfield-inn-suites-by-marriott-new-york-manhattan-central-park.html?checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$313/nt seen (Booking, these dates) incl. breakfast; one-seat D from Columbus Circle to the stadium.",
+  "notes": "$313/nt seen (Booking, these dates) incl. breakfast; one-seat D from Columbus Circle to the stadium. SOLD OUT 7/29-31: Google offers alt dates Jul 30-Aug 1 at $320 (tonight 7/29 is the blocker).",
   "parking": "nearby_garage",
   "parking_cost": "~$40-60/night deck next door (validated; guest-reported)",
-  "parking_note": "Hotel stamps ticket for discount; GMC 440 W 57th St and Metropolis 838 11th Ave also listed."
+  "parking_note": "Hotel stamps ticket for discount; GMC 440 W 57th St and Metropolis 838 11th Ave also listed.",
+  "available_jul29": false
  },
  {
   "id": "da-vinci-hotel",
@@ -570,10 +601,11 @@
   "stars_or_class": "2.5-star",
   "walk_to_subway_note": "57th St N/Q/R/W 3 min; Columbus Circle 5 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Da+Vinci+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$277/nt seen (Booking, these dates); small Euro-style hotel two blocks from the park.",
+  "notes": "$277/nt seen (Booking, these dates); small Euro-style hotel two blocks from the park. 7/29 availability unverifiable online: Google shows no rate feed (call/visit website for rates).",
   "parking": "nearby_garage",
   "parking_cost": "$40/24h garage across street (~$26/day guest discount reported)",
-  "parking_note": "Impark garage across the street; van/SUV/oversized extra."
+  "parking_note": "Impark garage across the street; van/SUV/oversized extra.",
+  "available_jul29": null
  },
  {
   "id": "west-side-ymca",
@@ -584,14 +616,15 @@
   "lat": 40.770944,
   "lng": -73.980839,
   "price_band": "$",
-  "est_nightly_usd": 125,
+  "est_nightly_usd": 85,
   "stars_or_class": "hostel-style",
   "walk_to_subway_note": "Columbus Circle A/B/C/D/1 3 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=West+Side+YMCA+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$125/nt seen (Booking, these dates); spartan shared-bath rooms but unbeatable corner + one-seat D to the stadium.",
+  "notes": "$125/nt seen (Booking, these dates); spartan shared-bath rooms but unbeatable corner + one-seat D to the stadium. live rate 7/29 $85/nt (Google, dates verified, DEAL flag); bed config unverified.",
   "parking": "none",
   "parking_cost": null,
-  "parking_note": "No guest parking."
+  "parking_note": "No guest parking.",
+  "available_jul29": true
  },
  {
   "id": "riverside-tower-hotel",
@@ -606,10 +639,11 @@
   "stars_or_class": "2-star",
   "walk_to_subway_note": "79th St 1 train 6 min",
   "booking_url": "https://www.booking.com/searchresults.html?ss=Riverside+Tower+Hotel+New+York&checkin=2026-07-29&checkout=2026-07-31&group_adults=2&no_rooms=1&group_children=0",
-  "notes": "$109/nt seen (Booking, these dates); bare-bones budget with Hudson River views.",
+  "notes": "$109/nt seen (Booking, these dates); bare-bones budget with Hudson River views. SOLD OUT 7/29-31: Google offers alt dates Jul 30-Aug 1 at $236 (tonight 7/29 is the blocker).",
   "parking": "none",
   "parking_cost": "~$65/day self-park nearby",
-  "parking_note": "Hotel provides no parking; nearest garages around W 80th St."
+  "parking_note": "Hotel provides no parking; nearest garages around W 80th St.",
+  "available_jul29": false
  },
  {
   "id": "night-hotel-broadway",
