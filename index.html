@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NYC — Liverpool at Yankee Stadium + Jazz — Jul 29–31, 2026</title>
 <meta property="og:title" content="NYC: Liverpool at Yankee Stadium + Jazz — Jul 29–31">
-<meta property="og:description" content="Match, Martz bus times, post-game late jazz sets, Thursday club crawl, and 60 hotels with date-loaded booking links.">
+<meta property="og:description" content="Verified jazz shows both nights (dinner-and-show vs laid-back rooms) plus the full park-train-subway route guide.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://a799608.github.io/nyc-jazz-trip/">
-<meta property="og:image" content="https://a799608.github.io/nyc-jazz-trip/og-cover.jpg?s=1">
+<meta property="og:image" content="https://a799608.github.io/nyc-jazz-trip/og-cover.jpg?s=2">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://a799608.github.io/nyc-jazz-trip/og-cover.jpg?s=1">
+<meta name="twitter:image" content="https://a799608.github.io/nyc-jazz-trip/og-cover.jpg?s=2">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -28,11 +28,9 @@
   .show b { font-size: 12.5px; }
   .tag { display: inline-block; border-radius: 3px; padding: 0 5px; font-size: 10.5px; color: #fff; margin-left: 4px; vertical-align: 1px; }
   .late { background: #1e8a3c; }
-  .tight { background: #c77700; }
   .htl-book { background: #1e8a3c; color: #fff; text-decoration: none; border-radius: 4px; padding: 3px 8px; font-weight: 600; display: inline-block; margin-top: 3px; }
+  .routebtn { display: block; text-align: center; background: #1565c0; color: #fff; text-decoration: none; font-weight: 700; padding: 9px 6px; border-radius: 6px; margin: 6px 0; }
   .leaflet-popup-content { font-size: 12.5px; }
-  select, input[type=range] { font-size: 12px; }
-  .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
   .muted { color: #777; font-size: 11px; }
   .bigstat { font-size: 13px; background: #f4f7f4; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
   /* ---- Mobile: panels become bottom-sheet tabs ---- */
@@ -59,90 +57,35 @@
 <body>
 <div id="map"></div>
 <script>
-  var map = L.map('map').setView([40.7680, -73.9800], 12);
+  var map = L.map('map').setView([40.7450, -73.9900], 13);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
   var STADIUM = [40.8296, -73.9262];
-  var PABT = [40.7570, -73.9910];
+  var PENN = [40.7506, -73.9935];
+  var SECAUCUS = [40.7614, -74.0758];
 
   L.marker(STADIUM, { icon: L.divIcon({ className: '', html: '<div style="font-size:26px;line-height:26px;filter:drop-shadow(0 1px 2px #0008)">⭐</div>', iconSize: [26,26], iconAnchor: [13,13] }) })
-    .addTo(map).bindTooltip('Yankee Stadium — Liverpool match (Wed)', { permanent: true, direction: 'right', offset: [10,0] });
-  L.marker(PABT, { icon: L.divIcon({ className: '', html: '<div style="font-size:22px;line-height:22px;filter:drop-shadow(0 1px 2px #0008)">🚌</div>', iconSize: [22,22], iconAnchor: [11,11] }) })
-    .addTo(map).bindTooltip('Port Authority — Martz from Wilkes-Barre', { direction: 'right', offset: [10,0] });
+    .addTo(map).bindTooltip('Yankee Stadium — Liverpool vs Wrexham (Wed 7:30)', { direction: 'right', offset: [10,0] });
+  L.marker(PENN, { icon: L.divIcon({ className: '', html: '<div style="font-size:22px;line-height:22px;filter:drop-shadow(0 1px 2px #0008)">🚉</div>', iconSize: [22,22], iconAnchor: [11,11] }) })
+    .addTo(map).bindTooltip('Penn Station — NJ Transit from Secaucus', { direction: 'right', offset: [10,0] });
+  L.marker(SECAUCUS, { icon: L.divIcon({ className: '', html: '<div style="font-size:22px;line-height:22px;filter:drop-shadow(0 1px 2px #0008)">🅿️</div>', iconSize: [22,22], iconAnchor: [11,11] }) })
+    .addTo(map).bindTooltip('Secaucus Junction — park here (24/7 lot)', { direction: 'right', offset: [10,0] });
 
-  var BAND_COLOR = { '$': '#2e7d32', '$$': '#1565c0', '$$$': '#7b1fa2', '$$$$': '#b71c1c' };
-  var state = { maxBand: '$$$', martz: false, night: 'both', venueStyle: 'no_basement', driving: false, needAvail: true };
-  function availDataExists() {
-    return hotels.some(function (h) { return 'available_jul29' in h; });
-  }
-  function parkingOk(h) {
-    if (!state.driving) return true;
-    if (!('parking' in h) || h.parking == null) return true;   // unverified: show, labeled in popup
-    return h.parking !== 'none';
-  }
-  var excluded = {};
-  try { excluded = JSON.parse(localStorage.getItem('excludedHotels') || '{}'); } catch (e) {}
-  window._excludeHotel = function (id) {
-    excluded[id] = true;
-    localStorage.setItem('excludedHotels', JSON.stringify(excluded));
-    map.closePopup();
-    render();
-  };
-  window._resetExcluded = function () {
-    excluded = {};
-    localStorage.setItem('excludedHotels', '{}');
-    render();
-  };
-  // venueStyle: 'no_basement' (dinner+laid-back, hide small basements) | 'dinner_show' | 'laid_back' | 'all'
-  function venuePass(s) {
-    var t = s.venue_type;
-    if (!t) return true;                                  // unclassified: show until data lands
-    if (state.venueStyle === 'all') return true;
-    if (state.venueStyle === 'no_basement') return t !== 'basement_small';
-    return t === state.venueStyle;
-  }
-  var TYPE_LABEL = { dinner_show: '🍽 dinner & show', laid_back: '🛋 laid-back', basement_small: '🕳 small basement room' };
-  var hotels = [], jazz = { wednesday: [], thursday: [] }, fixture = null;
-  var hotelLayer = L.layerGroup().addTo(map);
+  var state = { night: 'both', venueStyle: 'no_basement' };
+  var jazz = { wednesday: [], thursday: [] }, fixture = null;
   var jazzLayer = L.layerGroup().addTo(map);
 
   function esc(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-  function bandRank(b) { return { '$':1, '$$':2, '$$$':3, '$$$$':4 }[b] || 2; }
-  function dist(a, b) { return map.distance(a, b); }
 
-  // Hotel convenience score: stadium transit proxy + jazz-district proximity + optional PABT (bus luggage) proximity
-  function hotelScore(h) {
-    var p = [h.lat, h.lng];
-    var jazzCtr = [40.7330, -74.0020];            // Village core
-    var sSub = Math.max(0, 1 - dist(p, STADIUM) / 14000);
-    var sJazz = Math.max(0, 1 - dist(p, jazzCtr) / 9000);
-    var sPabt = Math.max(0, 1 - dist(p, PABT) / 5000);
-    return state.martz ? (0.30 * sSub + 0.40 * sJazz + 0.30 * sPabt) : (0.40 * sSub + 0.60 * sJazz);
-  }
-
-  function hotelPopup(h) {
-    var html = '<b>' + esc(h.name) + '</b><br>' + esc(h.neighborhood) + ' &middot; ' + esc(h.price_band) +
-      (h.est_nightly_usd ? ' &middot; ~$' + h.est_nightly_usd + '/nt' : '') +
-      (h.stars_or_class ? ' &middot; ' + esc(h.stars_or_class) : '') + '<br>' +
-      '<span class="muted">' + esc(h.walk_to_subway_note || '') + '</span><br>' +
-      (state.driving && 'parking' in h ? (h.parking && h.parking !== 'none'
-          ? '<b>🚗 Parking:</b> ' + esc(h.parking_cost || h.parking) + (h.parking_note ? ' — ' + esc(h.parking_note) : '') + '<br>'
-          : (h.parking === 'none' ? '<b style="color:#b71c1c">🚗 No parking offered</b><br>'
-                                  : '<span class="muted">🚗 parking unverified — call ahead</span><br>'))
-        : '') +
-      ('available_jul29' in h ? (h.available_jul29 === true
-          ? '<b style="color:#1e8a3c">✓ 2-bed room showing for tonight</b><br>'
-          : (h.available_jul29 === 'one_bed_only' ? '<b style="color:#c77700">⚠ Only 1-bed rooms left</b><br>'
-          : (h.available_jul29 == null ? '<span class="muted">availability unverified — check the link</span><br>' : ''))) : '') +
-      esc(h.notes || '') + '<br>' +
-      '<div style="display:flex;gap:6px;margin-top:4px">' +
-      '<a class="htl-book" style="flex:1.4;text-align:center" href="https://www.google.com/travel/search?q=' + encodeURIComponent(h.name + ' New York') + '&checkin=2026-07-29&checkout=2026-07-31" target="_blank" rel="noopener">Live rates Jul 29&ndash;31</a>' +
-      '<button onclick="_excludeHotel(\'' + esc(h.id) + '\')" style="flex:1;background:#fff;border:1px solid #c33;color:#c33;border-radius:6px;cursor:pointer;font-weight:700">&#10008; Exclude</button>' +
-      '</div>' +
-      '<div style="font-size:10.5px;margin-top:2px"><a href="' + esc(h.booking_url) + '" target="_blank" rel="noopener" style="color:#888">alt: try Booking.com</a></div>';
-    return html;
+  var TYPE_LABEL = { dinner_show: '🍽 dinner & show', laid_back: '🛋 laid-back', basement_small: '🕳 small basement room' };
+  function venuePass(s) {
+    var t = s.venue_type;
+    if (!t) return true;
+    if (state.venueStyle === 'all') return true;
+    if (state.venueStyle === 'no_basement') return t !== 'basement_small';
+    return t === state.venueStyle;
   }
 
   function jazzPopup(s, night) {
@@ -157,24 +100,6 @@
   }
 
   function render() {
-    hotelLayer.clearLayers();
-    var ranked = hotels.slice().sort(function (a, b) { return hotelScore(b) - hotelScore(a); });
-    var kept = 0;
-    ranked.forEach(function (h, i) {
-      if (bandRank(h.price_band) > bandRank(state.maxBand)) return;
-      if (!parkingOk(h)) return;
-      if (excluded[h.id]) return;
-      if (h.available_jul29 === false) return;   // confirmed sold out for these dates
-      if (state.needAvail && availDataExists() && h.available_jul29 !== true) return;  // strict: confirmed rooms only
-      kept++;
-      var top3 = i < 3;
-      var m = L.circleMarker([h.lat, h.lng], {
-        radius: top3 ? 9 : 6.5, color: top3 ? '#d4af37' : '#fff', weight: top3 ? 3 : 1.5,
-        fillColor: BAND_COLOR[h.price_band] || '#555', fillOpacity: 0.95
-      }).bindPopup(hotelPopup(h), { maxWidth: 300 });
-      hotelLayer.addLayer(m);
-    });
-
     jazzLayer.clearLayers();
     var nights = state.night === 'both' ? ['wednesday', 'thursday'] : [state.night];
     nights.forEach(function (n) {
@@ -185,13 +110,6 @@
         jazzLayer.addLayer(m);
       });
     });
-
-    var el = document.getElementById('hcount');
-    if (el) {
-      var nEx = Object.keys(excluded).length;
-      el.innerHTML = kept + ' hotels shown' +
-        (nEx ? ' &middot; ' + nEx + ' excluded <a href="#" onclick="_resetExcluded();return false">reset</a>' : '');
-    }
     renderItin();
   }
 
@@ -203,15 +121,8 @@
       var f = fixture.fixture;
       h += '<div class="bigstat">⚽ <b>Liverpool vs ' + esc(f.opponent) + '</b><br>' + esc(f.date) + ' &middot; kickoff ' + esc(f.kickoff_local) +
            (fixture.end_estimate ? ' &middot; ends ~' + esc(fixture.end_estimate) : '') + '</div>';
-    } else {
-      h += '<div class="bigstat muted">Match details loading…</div>';
     }
-    if (fixture && fixture.martz && fixture.martz.wed_departures) {
-      h += '<h4>🚌 Martz from Wilkes-Barre</h4><div class="muted">Wed out: ' +
-        fixture.martz.wed_departures.map(function (d) { return esc(d.time) + '→' + esc(d.arrive); }).join(' · ') +
-        '<br>Fri back: ' + (fixture.martz.fri_returns || []).map(function (d) { return esc(d.time); }).join(' · ') +
-        (fixture.martz.fare_range ? '<br>Fare: ' + esc(fixture.martz.fare_range) : '') + '</div>';
-    }
+    h += '<a class="routebtn" href="route.html">🗺 GETTING IN: parking → train → subway<br><span style="font-weight:400;font-size:11.5px">Secaucus lot ($6/day prepay) · NJ Transit 10 min to Penn · D train to the match — full step-by-step with maps</span></a>';
     function showLine(s) {
       return '<div class="show"><b>' + esc(s.venue) + '</b>' +
         (s.venue_type ? ' <span class="muted">' + (TYPE_LABEL[s.venue_type] || '') + '</span>' : '') +
@@ -227,19 +138,14 @@
     el.innerHTML = h;
   }
 
-  // Controls
   var ctl = L.control({ position: 'topright' });
   ctl.onAdd = function () {
     var d = L.DomUtil.create('div', 'panel');
     d.innerHTML = '<h3>NYC: Liverpool + Jazz<br><span class="muted">Wed Jul 29 → Fri Jul 31</span></h3>' +
-      '<label><input type="checkbox" id="c-avail" checked> ✓ Only hotels with confirmed availability</label><br>' +
-      '<label><input type="checkbox" id="c-driving"> 🚗 Need hotel parking (off — car parks in Secaucus)</label><br>' +
-      '<label><input type="checkbox" id="c-martz"> Arriving by Martz bus (favor Port Authority area)</label><br>' +
-      'Max hotel price: <select id="c-band"><option value="$">$</option><option value="$$">$$</option><option value="$$$" selected>$$$</option><option value="$$$$">$$$$</option></select><br>' +
+      '<a class="routebtn" href="route.html">🗺 Route guide (park &rarr; train &rarr; subway)</a>' +
       'Jazz pins: <select id="c-night"><option value="both" selected>both nights</option><option value="wednesday">Wed only</option><option value="thursday">Thu only</option></select><br>' +
       'Venue style: <select id="c-style"><option value="no_basement" selected>dinner + laid-back (no tiny basements)</option><option value="dinner_show">🍽 dinner &amp; show only</option><option value="laid_back">🛋 laid-back only</option><option value="all">everything (incl. basements)</option></select>' +
-      '<div id="hcount" class="muted"></div>' +
-      '<div class="muted" style="margin-top:4px"><span class="legend-dot" style="background:#2e7d32"></span>$ <span class="legend-dot" style="background:#1565c0"></span>$$ <span class="legend-dot" style="background:#7b1fa2"></span>$$$ <span class="legend-dot" style="background:#b71c1c"></span>$$$$ &middot; gold ring = top-3 fit &middot; 🎷 Wed 🎺 Thu</div>';
+      '<div class="muted" style="margin-top:4px">🎷 Wed shows &middot; 🎺 Thu shows &middot; ⭐ stadium &middot; 🚉 Penn &middot; 🅿️ Secaucus parking</div>';
     L.DomEvent.disableClickPropagation(d);
     return d;
   };
@@ -277,26 +183,20 @@
     _mtabbar.appendChild(b);
   }
 
-  function wire() {
-    document.getElementById('c-avail').addEventListener('change', function (e) { state.needAvail = e.target.checked; render(); });
-    document.getElementById('c-driving').addEventListener('change', function (e) { state.driving = e.target.checked; render(); });
-    document.getElementById('c-martz').addEventListener('change', function (e) { state.martz = e.target.checked; render(); });
-    document.getElementById('c-band').addEventListener('change', function (e) { state.maxBand = e.target.value; render(); });
+  document.getElementById && (function wireup() {
+    // listeners attach after controls exist
     document.getElementById('c-night').addEventListener('change', function (e) { state.night = e.target.value; render(); });
     document.getElementById('c-style').addEventListener('change', function (e) { state.venueStyle = e.target.value; render(); });
-  }
-  wire();
-  addMobilePanel(document.getElementById('itin').closest('.panel'), '🗓 Trip plan');
-  addMobilePanel(document.getElementById('c-martz').closest('.panel'), '🎛 Filters');
+    addMobilePanel(document.getElementById('itin').closest('.panel'), '🗓 Trip plan');
+    addMobilePanel(document.getElementById('c-night').closest('.panel'), '🎛 Filters');
+  })();
 
   Promise.all([
-    fetch('nyc_hotels.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
     fetch('nyc_jazz.json').then(function (r) { return r.json(); }).catch(function () { return { wednesday: [], thursday: [] }; }),
     fetch('nyc_fixture.json').then(function (r) { return r.json(); }).catch(function () { return null; })
   ]).then(function (res) {
-    hotels = res[0] || [];
-    jazz = res[1] || { wednesday: [], thursday: [] };
-    fixture = res[2];
+    jazz = res[0] || { wednesday: [], thursday: [] };
+    fixture = res[1];
     render();
   });
 </script>
