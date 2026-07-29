@@ -127,7 +127,7 @@
       (h.est_nightly_usd ? ' &middot; ~$' + h.est_nightly_usd + '/nt' : '') +
       (h.stars_or_class ? ' &middot; ' + esc(h.stars_or_class) : '') + '<br>' +
       '<span class="muted">' + esc(h.walk_to_subway_note || '') + '</span><br>' +
-      ('parking' in h ? (h.parking && h.parking !== 'none'
+      (state.driving && 'parking' in h ? (h.parking && h.parking !== 'none'
           ? '<b>🚗 Parking:</b> ' + esc(h.parking_cost || h.parking) + (h.parking_note ? ' — ' + esc(h.parking_note) : '') + '<br>'
           : (h.parking === 'none' ? '<b style="color:#b71c1c">🚗 No parking offered</b><br>'
                                   : '<span class="muted">🚗 parking unverified — call ahead</span><br>'))
