@@ -133,8 +133,9 @@
                                   : '<span class="muted">🚗 parking unverified — call ahead</span><br>'))
         : '') +
       ('available_jul29' in h ? (h.available_jul29 === true
-          ? '<b style="color:#1e8a3c">✓ Rooms showing for tonight</b><br>'
-          : (h.available_jul29 == null ? '<span class="muted">availability unverified — check the link</span><br>' : '')) : '') +
+          ? '<b style="color:#1e8a3c">✓ 2-bed room showing for tonight</b><br>'
+          : (h.available_jul29 === 'one_bed_only' ? '<b style="color:#c77700">⚠ Only 1-bed rooms left</b><br>'
+          : (h.available_jul29 == null ? '<span class="muted">availability unverified — check the link</span><br>' : ''))) : '') +
       esc(h.notes || '') + '<br>' +
       '<div style="display:flex;gap:6px;margin-top:4px">' +
       '<a class="htl-book" style="flex:1.4;text-align:center" href="' + esc(h.booking_url) + '" target="_blank" rel="noopener">Book Jul 29&ndash;31</a>' +
