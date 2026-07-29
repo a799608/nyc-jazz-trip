@@ -35,6 +35,25 @@
   .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
   .muted { color: #777; font-size: 11px; }
   .bigstat { font-size: 13px; background: #f4f7f4; border-radius: 6px; padding: 6px 8px; margin: 6px 0; }
+  /* ---- Mobile: panels become bottom-sheet tabs ---- */
+  @media (max-width: 700px) {
+    .mpanel { display: none !important; }
+    .mpanel.mopen {
+      display: block !important; position: fixed !important;
+      left: 8px; right: 8px; bottom: 56px; top: auto !important;
+      max-height: 62vh; overflow-y: auto; z-index: 10000;
+      max-width: none !important; width: auto !important; margin: 0 !important;
+    }
+    .mtabbar {
+      position: fixed; bottom: 0; left: 0; right: 0; display: flex; z-index: 10001;
+      background: #fff; border-top: 1px solid #ccc; box-shadow: 0 -2px 8px rgba(0,0,0,.15);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .mtab { flex: 1; padding: 12px 2px; font-size: 13px; border: none; background: #fff; font-weight: 700; color: #333; }
+    .mtab.mact { background: #1e8a3c; color: #fff; }
+    .panel label { display: inline-block; padding: 3px 0; }
+    .leaflet-control-attribution { font-size: 9px; }
+  }
 </style>
 </head>
 <body>
@@ -191,6 +210,29 @@
   };
   itinCtl.addTo(map);
 
+  // ---- Mobile bottom-sheet tabs (narrow screens only) ----
+  var IS_MOBILE = window.innerWidth <= 700;
+  var _mtabbar = null;
+  function addMobilePanel(el, label) {
+    if (!IS_MOBILE || !el) return;
+    if (!_mtabbar) {
+      _mtabbar = document.createElement('div');
+      _mtabbar.className = 'mtabbar';
+      document.body.appendChild(_mtabbar);
+    }
+    el.classList.add('mpanel');
+    var b = document.createElement('button');
+    b.className = 'mtab';
+    b.textContent = label;
+    b.addEventListener('click', function () {
+      var wasOpen = el.classList.contains('mopen');
+      document.querySelectorAll('.mpanel').forEach(function (p) { p.classList.remove('mopen'); });
+      document.querySelectorAll('.mtab').forEach(function (t) { t.classList.remove('mact'); });
+      if (!wasOpen) { el.classList.add('mopen'); b.classList.add('mact'); }
+    });
+    _mtabbar.appendChild(b);
+  }
+
   function wire() {
     document.getElementById('c-martz').addEventListener('change', function (e) { state.martz = e.target.checked; render(); });
     document.getElementById('c-band').addEventListener('change', function (e) { state.maxBand = e.target.value; render(); });
@@ -198,6 +240,8 @@
     document.getElementById('c-style').addEventListener('change', function (e) { state.venueStyle = e.target.value; render(); });
   }
   wire();
+  addMobilePanel(document.getElementById('itin').closest('.panel'), '🗓 Trip plan');
+  addMobilePanel(document.getElementById('c-martz').closest('.panel'), '🎛 Filters');
 
   Promise.all([
     fetch('nyc_hotels.json').then(function (r) { return r.json(); }).catch(function () { return []; }),
