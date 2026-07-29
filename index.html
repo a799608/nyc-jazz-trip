@@ -138,9 +138,10 @@
           : (h.available_jul29 == null ? '<span class="muted">availability unverified — check the link</span><br>' : ''))) : '') +
       esc(h.notes || '') + '<br>' +
       '<div style="display:flex;gap:6px;margin-top:4px">' +
-      '<a class="htl-book" style="flex:1.4;text-align:center" href="' + esc(h.booking_url) + '" target="_blank" rel="noopener">Book Jul 29&ndash;31</a>' +
+      '<a class="htl-book" style="flex:1.4;text-align:center" href="https://www.google.com/travel/search?q=' + encodeURIComponent(h.name + ' New York') + '&checkin=2026-07-29&checkout=2026-07-31" target="_blank" rel="noopener">Live rates Jul 29&ndash;31</a>' +
       '<button onclick="_excludeHotel(\'' + esc(h.id) + '\')" style="flex:1;background:#fff;border:1px solid #c33;color:#c33;border-radius:6px;cursor:pointer;font-weight:700">&#10008; Exclude</button>' +
-      '</div>';
+      '</div>' +
+      '<div style="font-size:10.5px;margin-top:2px"><a href="' + esc(h.booking_url) + '" target="_blank" rel="noopener" style="color:#888">alt: try Booking.com</a></div>';
     return html;
   }
 
